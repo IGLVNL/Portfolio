@@ -25,16 +25,16 @@ body{
     grid-template-columns: repeat(4,auto);
     grid-template-areas: '. itemB itemB itemA '
                         ' .itemC itemC itemA ';
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("img/WhatsApp\ Image\ 2023-09-08\ at\ 20.14.41.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("img/maxresdefault.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0% 45%;
     background-attachment: fixed;
 }
-#portrait:hover{
+/* #portrait:hover{
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("img/WhatsApp\ Image\ 2023-09-08\ at\ 20.14.41.jpg");
     transition: 0.25s;
-}
+} */
 
 #info-personal{
     display: grid;
@@ -63,14 +63,14 @@ body{
     display: grid;
     justify-content: center;
     align-items: center;
-    background-color: rgba(101, 101, 101, 0.17);
+    background-color: rgba(169, 169, 169, 0.485);
     overflow: hidden;
     transition: 0.25s;
     position: relative;
 }
 
 .port:hover, .infoPers:hover, .infoIT:hover, .foot:hover {
-    background-color: rgba(88, 88, 88, 0.217); 
+    background-color: rgba(129, 122, 122, 0.217); 
     color: rgb(255, 255, 167);
     transition-delay: 0.1s;
 
