@@ -25,7 +25,7 @@ body{
     grid-template-columns: repeat(4,auto);
     grid-template-areas: '. itemB itemB itemA '
                         ' .itemC itemC itemA ';
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("img/maxresdefault.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("img/Fondo_00.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0% 45%;
