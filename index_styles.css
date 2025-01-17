@@ -288,21 +288,15 @@ body{
     #info-personal{
         grid-template-areas: 'item0 item0'
                             'item1 item1'
-                            'item2 item2'
                             'item3 item3'
+                            'item10 item10'
+                            'item6 item6'
+                            'item7 item7'
+                            'item8 item8'
+                            'item2 item2'
                             'item4 item4'
                             'item5 item5';
     }
-
-    #IT{
-        grid-template-areas: 'item6 item6'
-                            'item7 item7'
-                            'item8 item8'
-                            'item9 item9'
-                            'item10 item10';
-    }
-
-
     #itemA:hover {
         scale: 1.75;
         z-index: 500;
@@ -321,21 +315,15 @@ body{
     #info-personal{
         grid-template-areas: 'item0 item0'
                             'item1 item1'
-                            'item2 item2'
                             'item3 item3'
+                            'item10 item10'
+                            'item6 item6'
+                            'item7 item7'
+                            'item8 item8'
+                            'item2 item2'
                             'item4 item4'
                             'item5 item5';
     }
-
-    #IT{
-        grid-template-areas: 'item6 item6'
-                            'item7 item7'
-                            'item8 item8'
-                            'item9 item9'
-                            'item10 item10';
-    }
-
-
     #itemA:hover {
         scale: 2.25;
         z-index: 500;
