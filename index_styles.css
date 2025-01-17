@@ -31,27 +31,17 @@ body{
     background-position: 0% 45%;
     background-attachment: fixed;
 }
-/* #portrait:hover{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("img/WhatsApp\ Image\ 2023-09-08\ at\ 20.14.41.jpg");
-    transition: 0.25s;
-} */
 
 #info-personal{
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-areas: 'item0 item0'
-                        'item1 item1'
-                        'item2 item2'
-                        'item3 item4'
-                        'item5 item5';
-}
-
-#IT{
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    grid-template-areas: 'item6 item6'
+                        'item1 item10'
+                        'item3 item10'
+                        'item6 item6'
                         'item7 item8'
-                        'item9 item10';
+                        'item2 item2'
+                        'item4 item5';
 }
 
 #footer{
@@ -149,6 +139,11 @@ body{
     position: relative;
 }
 
+.infoPers p{
+    margin: 2% 0;
+    text-align: justify;
+}
+
 .infoIT{
     display: grid;
     justify-content: center;
@@ -182,10 +177,10 @@ body{
 #ln{grid-area: itemY; display: flex; justify-content: center;}
 #wp{grid-area: itemW; display: flex; justify-content: center;}
 
-#fb img{width: 30%;}
-#yt img{width: 30%;}
-#ln img{width: 30%;}
-#wp img{width: 30%;}
+#fb img{width: 15%;}
+#yt img{width: 15%;}
+#ln img{width: 15%;}
+#wp img{width: 15%;}
 
 #fb img:hover{animation: Escalar 1.5s infinite;}
 #yt img:hover{animation: Escalar 1.5s infinite;}
@@ -259,16 +254,20 @@ body{
 
 
 #itemA:hover {
-    scale: 3;
+    scale: 2.5;
     z-index: 500;
     border-radius: 2.5%;
-    transform: translate(-25%, 25%);
+    transform: translate(-25%, 35%);
 }
 
 
 
+.titulo{
+    font-size: 23px;
+}
+
 .subtitulo{
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: underline;
 }
 
@@ -302,6 +301,14 @@ body{
                             'item9 item9'
                             'item10 item10';
     }
+
+
+    #itemA:hover {
+        scale: 1.75;
+        z-index: 500;
+        border-radius: 2.5%;
+        transform: translate(0%, 10%);
+    }
 }
 
 @media (min-width: 376px) and (max-width: 500px) {
@@ -326,5 +333,13 @@ body{
                             'item8 item8'
                             'item9 item9'
                             'item10 item10';
+    }
+
+
+    #itemA:hover {
+        scale: 2.25;
+        z-index: 500;
+        border-radius: 2.5%;
+        transform: translate(-25%, 25%);
     }
 }
