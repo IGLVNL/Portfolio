@@ -303,6 +303,11 @@ body{
         border-radius: 2.5%;
         transform: translate(0%, 10%);
     }
+
+    #fb img{width: 30%;}
+    #yt img{width: 30%;}
+    #ln img{width: 30%;}
+    #wp img{width: 30%;}
 }
 
 @media (min-width: 376px) and (max-width: 500px) {
@@ -330,4 +335,9 @@ body{
         border-radius: 2.5%;
         transform: translate(-25%, 25%);
     }
+
+    #fb img{width: 30%;}
+    #yt img{width: 30%;}
+    #ln img{width: 30%;}
+    #wp img{width: 30%;}
 }
