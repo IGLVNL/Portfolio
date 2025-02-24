@@ -5,7 +5,7 @@ body{
     background-size: cover;
     letter-spacing: 1px;
     font-family: sans-serif;
-    color: white;
+    color: white !important;
 }
 
 .grid-container{
@@ -36,12 +36,12 @@ body{
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-areas: 'item0 item0'
-                        'item1 item10'
-                        'item3 item10'
-                        'item6 item6'
-                        'item7 item8'
-                        'item2 item2'
-                        'item4 item5';
+                         'item1 item10'
+                         'item3 item10'
+                         'item6 item6'
+                         'item7 item7'
+                         'item2 item2'
+                         'item4 item5';
 }
 
 #footer{
@@ -156,6 +156,17 @@ body{
     position: relative;
 }
 
+#item7{
+    width: 100%;
+    display: grid;
+    background-color: rgba(139, 139, 139, 0.453);
+    grid-template-columns: repeat(4,auto);
+    grid-template-areas: 'skill0 skill0 skill0 skill0'
+                         'skill1 skill2 skill3 skill4'
+                         'skill5 skill6 skill7 skill8'
+                         'skill9 skill9 skill10 skill10';
+}
+
 .foot{
     display: grid;
     justify-content: center;
@@ -167,8 +178,8 @@ body{
     font-family: sans-serif;
     position: relative;
     grid-template-areas: 'itemT itemT itemT itemT'
-                        'itemF itemL itemY itemW'
-                        'itemF itemL itemY itemW';
+                         'itemF itemL itemY itemW'
+                         'itemF itemL itemY itemW';
 }
 
 #ti{grid-area: itemT; display: flex; justify-content: center;}
@@ -236,9 +247,22 @@ body{
 #item7{grid-area: item7; padding: 10px;}
 #item8{grid-area: item8; padding: 10px;}
 #item9{grid-area: item9; padding: 10px;}
-#item10{grid-area: item10; padding: 10px; display: flex; flex-direction: column; justify-content: start;}
-
+#item10{grid-area: item10; padding: 10px; display: flex; flex-direction: column; 
+        justify-content: start;}
 #item11{grid-column: 1 / 6; padding: 10px;}
+
+.skills:hover{background-color: rgba(139, 139, 139, 0.453);}
+#skill0{grid-area: skill0; padding: 10px; text-align: center;}
+#skill1{grid-area: skill1; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill2{grid-area: skill2; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill3{grid-area: skill3; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill4{grid-area: skill4; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill5{grid-area: skill5; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill6{grid-area: skill6; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill7{grid-area: skill7; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill8{grid-area: skill8; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill9{grid-area: skill9; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+#skill10{grid-area: skill10; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
 
 /*Estilos*/
 
@@ -287,15 +311,14 @@ body{
     }
     #info-personal{
         grid-template-areas: 'item0 item0'
-                            'item1 item1'
-                            'item3 item3'
-                            'item10 item10'
-                            'item6 item6'
-                            'item7 item7'
-                            'item8 item8'
-                            'item2 item2'
-                            'item4 item4'
-                            'item5 item5';
+                             'item1 item1'
+                             'item3 item3'
+                             'item10 item10'
+                             'item6 item6'
+                             'item7 item7'
+                             'item2 item2'
+                             'item4 item4'
+                             'item5 item5';
     }
     #itemA:hover {
         scale: 1.75;
@@ -314,20 +337,18 @@ body{
     /*LayOut*/
     #portrait{
         grid-template-areas: 'itemB itemB itemB itemB itemB itemA '
-                            'itemB itemB itemB itemB itemB itemA '
-                            'itemC itemC itemC itemC itemC itemC ';
+                             'itemB itemB itemB itemB itemB itemA '
+                             'itemC itemC itemC itemC itemC itemC ';
     }
     #info-personal{
         grid-template-areas: 'item0 item0'
-                            'item1 item1'
-                            'item3 item3'
-                            'item10 item10'
-                            'item6 item6'
-                            'item7 item7'
-                            'item8 item8'
-                            'item2 item2'
-                            'item4 item4'
-                            'item5 item5';
+                             'item1 item1'
+                             'item3 item3'
+                             'item10 item10'
+                             'item7 item7'
+                             'item2 item2'
+                             'item4 item4'
+                             'item5 item5';
     }
     #itemA:hover {
         scale: 2.25;
