@@ -16,6 +16,7 @@ body{
 
 .grid-item{
     gap: 5px;
+    align-items: start;
 }
 
 #portrait{
@@ -34,10 +35,11 @@ body{
 
 #info-personal{
     display: grid;
+    justify-content: start;
     grid-template-columns: repeat(2,auto);
     grid-template-areas: 'item0 item0'
                          'item1 item10'
-                         'item3 item10'
+                         'item1 item10'
                          'item6 item6'
                          'item7 item7'
                          'item2 item2'
@@ -46,6 +48,7 @@ body{
 
 .parrafo{
     padding: 3%;
+    height: fit-content;
 }
 
 #footer{
@@ -133,8 +136,6 @@ body{
 
 .infoPers{
     display: grid;
-    justify-content: center;
-    align-items: center;
     background-color: rgba(139, 139, 139, 0.453);
     overflow: hidden;
     transition: 0.25s;
@@ -239,20 +240,21 @@ body{
 #itemA{grid-area: itemA; border-radius: 50%;}
 #itemB{grid-area: itemB; padding: 10px;}
 #itemC{grid-area: itemC; padding: 10px;}
+#itemC p{margin: 0;}
 
 #item0{grid-area: item0; padding: 10px;}
-#item1{grid-area: item1; padding: 10px;}
+#item1{grid-area: item1; padding: 10px; display: flex; flex-direction: column; height: 100%; align-items: start;}
 #item2{grid-area: item2; padding: 10px;}
 #item3{grid-area: item3; padding: 10px;}
 #item4{grid-area: item4; padding: 10px;}
-#item5{grid-area: item5; padding: 10px;}
+#item5{grid-area: item5; padding: 10px;display: flex; flex-direction: column; height: 100%; }
 
 #item6{grid-area: item6; padding: 10px;}
 #item7{grid-area: item7; padding: 10px;}
 #item8{grid-area: item8; padding: 10px;}
 #item9{grid-area: item9; padding: 10px;}
 #item10{grid-area: item10; padding: 10px; display: flex; flex-direction: column; 
-        justify-content: start;}
+        justify-content: start; height: 100%; }
 #item11{grid-column: 1 / 6; padding: 10px;}
 
 .skills:hover{background-color: rgba(139, 139, 139, 0.453);}
@@ -291,7 +293,13 @@ body{
 
 
 .titulo{
-    font-size: 23px;
+    text-align: center;
+    font-size: 19px;
+    margin: 0;
+}
+.titulo p {
+    text-align: center;
+    margin: 0;
 }
 
 @media (max-width: 375px) {
@@ -344,6 +352,7 @@ body{
                              'item1 item1'
                              'item3 item3'
                              'item10 item10'
+                             'item6 item6'
                              'item7 item7'
                              'item2 item2'
                              'item4 item4'
