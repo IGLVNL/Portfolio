@@ -37,11 +37,11 @@
             </div>
             <div class="infoPers" id="item1">
                 <p class="parrafo"><u>Presentación personal</u>
-                <br><br>Hola, mi nombre es Ignacio, tengo <span id="edad"></span> años y vivo en Palermo, CABA. Soy programador y estudiante avanzado de la carrera Ingeniería Industrial y estudiante inicial de Ingenieria en sistemas de informacion, apasionado y conocedor tanto en el area la industria como en el area de sistemas. Mi viaje profesional ha abarcado desde los procesos industriales en empresas manufactureras, hasta la realización de proyectos en el area de la programación. Mi formación en Ingeniería Industrial me ha proporcionado una sólida base en ciencias duras y tecnologias aplicadas, así como en la gestión de las areas principales de una organizacion y el buén desarrollo de proyectos. Estas habilidades son transferibles y permiten abordar problemas en otras areas como el desarrollo, de manera efectiva. A medida que me sumergí en el desarrollo, descubrí una pasión por aprender cada día más sobre esta amplia disciplina, incluyendo desarrollo web Front-End y Back-End, manejo de bases de datos SQL, desarrollo de aplicaciones Android, aplicaciones de escritorio con Java y C#.</p>
+                <br><br>Hola, mi nombre es Ignacio, tengo <span id="edad1"></span> años y vivo en Palermo, CABA. Soy programador y estudiante avanzado de la carrera Ingeniería Industrial y estudiante inicial de Ingenieria en sistemas de informacion, apasionado y conocedor tanto en el area la industria como en el area de sistemas. Mi viaje profesional ha abarcado desde los procesos industriales en empresas manufactureras, hasta la realización de proyectos en el area de la programación. Mi formación en Ingeniería Industrial me ha proporcionado una sólida base en ciencias duras y tecnologias aplicadas, así como en la gestión de las areas principales de una organizacion y el buén desarrollo de proyectos. Estas habilidades son transferibles y permiten abordar problemas en otras areas como el desarrollo, de manera efectiva. A medida que me sumergí en el desarrollo, descubrí una pasión por aprender cada día más sobre esta amplia disciplina, incluyendo desarrollo web Front-End y Back-End, manejo de bases de datos SQL, desarrollo de aplicaciones Android, aplicaciones de escritorio con Java y C#.</p>
                 <p class="parrafo"><u>Datos personales</u>
                 <br><br>Nombre y apellido: Ignacio Gabriel López Velázquez
                 <br>Fecha de nacimiento: 19-06-1990
-                <br>Edad: 34 años
+                <br>Edad: <span id="edad2"></span> años
                 <br>DNI: 35348759
                 <br>Nacionalidad: argentino (Moreno-Bs. As.)
                 <br>Domicilio: Palermo/CABA
@@ -49,8 +49,8 @@
                 <br>Hijos: No
                 <br>CUIL: 20-35348759-1
                 <br>Celular/WhatsApp: 11-68553317
-                <br>E-mail: ignaciolopezvelazquez @hotmail.com
-                <br>E-mail (alternativo): iglvnl.mnj @gmail.com
+                <br>E-mail: ignaciolopezvelazquez@hotmail.com
+                <br>E-mail (alternativo): iglvnl.mnj@gmail.com
                 <br>Disponibilidad horaria: Full time - Part time - Pasantía
                 <br>Posibilidad de traslado/mudanza: Si</p>
             </div>
@@ -100,7 +100,7 @@
                   "- Estilización avanzada 
                    <br>- Flexbox y Grid 
                    <br>- Animaciones y transiciones 
-                   <br>- Diseño responsivo ">
+                   <br>- Diseño responsive">
                     CSS: Intermedio
                   </div>
                   <div class="skills" id="skill4" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
@@ -122,8 +122,7 @@
                   "- Consultas SQL 
                    <br>- Gestión de bases de datos 
                    <br>- Normalización de datos 
-                   <br>- Creación de tablas y relaciones 
-                   <br>- Consultas JOIN - Uso de índices">
+                   <br>- Creación de tablas y relaciones">
                     SQL: Básico
                   </div>
                   <div class="skills" id="skill7" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
@@ -137,14 +136,15 @@
                   "- Desarrollo con Unity 
                     <br>- Programación orientada a objetos 
                     <br>- Clean Coding 
-                    <br>- Creación de scripts para videojuegos - Uso de componentes y assets 
+                    <br>- Creación de scripts para videojuegos 
+                    <br>- Uso de componentes y assets 
                     <br>- Debugging y optimización de juegos">
                     C#: Intermedio
                   </div>
                   <div class="skills" id="skill9" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
                   "- Desarrollo Android 
                     <br>- Interacción con APIs 
-                    <br>- Manejo de actividades
+                    <br>- Manejo de activities
                     <br>- Creación de interfaces de usuario 
                     <br>- Almacenamiento de datos local (SQLite)">
                     Android: Básico
@@ -208,7 +208,8 @@
 </html>
 <script>
     let edad = new Date().getFullYear() - 1990;
-    document.getElementById("edad").textContent = edad;
+    document.getElementById("edad1").textContent = edad;
+    document.getElementById("edad2").textContent = edad;
     document.addEventListener('DOMContentLoaded', function () {
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
       const tooltipList = Array.from(tooltipTriggerList).map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
