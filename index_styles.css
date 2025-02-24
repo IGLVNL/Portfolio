@@ -44,6 +44,10 @@ body{
                          'item4 item5';
 }
 
+.parrafo{
+    padding: 3%;
+}
+
 #footer{
     display: grid;
     grid-template-columns: repeat(5,auto);
@@ -252,7 +256,7 @@ body{
 #item11{grid-column: 1 / 6; padding: 10px;}
 
 .skills:hover{background-color: rgba(139, 139, 139, 0.453);}
-#skill0{grid-area: skill0; padding: 10px; text-align: center;}
+#skill0{grid-area: skill0; padding: 10px; text-align: center; font-size:17px;}
 #skill1{grid-area: skill1; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
 #skill2{grid-area: skill2; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
 #skill3{grid-area: skill3; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
@@ -288,11 +292,6 @@ body{
 
 .titulo{
     font-size: 23px;
-}
-
-.subtitulo{
-    font-size: 18px;
-    text-decoration: underline;
 }
 
 @media (max-width: 375px) {
