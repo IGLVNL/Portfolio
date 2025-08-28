@@ -21,10 +21,11 @@ body{
 
 #portrait{
     display: grid;
-    padding: 20px;
-    grid-template-columns: repeat(4,auto);
-    grid-template-areas:'itemB itemB itemB itemA'
-                        'itemC itemC itemC itemA';
+    padding: 0;
+    grid-template-columns: repeat(7,auto);
+    grid-template-areas:'itemB itemB itemB itemB itemB itemA itemA'
+                        'itemB itemB itemB itemB itemB itemA itemA'
+                        'itemC itemC itemC itemC itemC itemC itemC';
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url("img/Fondo_00.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,13 +37,18 @@ body{
     display: grid;
     justify-content: start;
     grid-template-columns: repeat(2,auto);
-    grid-template-areas: 'item0 item0'
-                         'item1 item10'
-                         'item9 item9'
-                         'item6 item6'
-                         'item7 item7'
-                         'item2 item2'
-                         'item4 item5';
+    grid-template-areas:'item0 item0'
+                        'item1 item10'
+                        'item9 item9'
+                        'item6 item6'
+                        'item7 item7'
+                        'item2 item2'
+                        'item4 item5';
+}
+
+p{
+    margin: 0% !important;
+    padding: 10px !important;
 }
 
 .parrafo{
@@ -164,11 +170,10 @@ body{
     width: 100%;
     display: grid;
     background-color: rgba(139, 139, 139, 0.453);
-    grid-template-columns: repeat(4,auto);
-    grid-template-areas: 'skill0 skill0 skill0 skill0'
-                         'skill1 skill2 skill3 skill4'
-                         'skill5 skill6 skill7 skill8'
-                         'skill9 skill9 skill10 skill10';
+    grid-template-columns: repeat(5,auto);
+    grid-template-areas:    'skill0 skill0 skill0 skill0 skill0 '
+                            'skill1 skill2 skill3 skill4 skill5 '
+                            'skill6 skill7 skill8 skill9 skill10';
 }
 
 .foot{
@@ -181,20 +186,20 @@ body{
     letter-spacing: 1px;
     font-family: sans-serif;
     position: relative;
-    grid-template-areas: 'itemT itemT itemT itemT'
-                         'itemF itemL itemY itemW'
-                         'itemF itemL itemY itemW';
+    grid-template-areas:    'itemT itemT itemT itemT'
+                            'itemF itemL itemY itemW'
+                            'itemF itemL itemY itemW';
 }
 
-#ti{grid-area: itemT; display: flex; justify-content: center;}
+#ti{grid-area: itemT; display: flex; justify-content: center; margin-bottom: 10px!important;}
 #fb{grid-area: itemF; display: flex; justify-content: center;}
 #yt{grid-area: itemL; display: flex; justify-content: center;}
 #ln{grid-area: itemY; display: flex; justify-content: center;}
 #wp{grid-area: itemW; display: flex; justify-content: center;}
 
-#fb img{width: 15%;}
+#fb img{width: 14%;}
 #yt img{width: 15%;}
-#ln img{width: 15%;}
+#ln img{width: 25%;}
 #wp img{width: 15%;}
 
 #fb img:hover{animation: Escalar 1.5s infinite;}
@@ -214,7 +219,7 @@ body{
 }
 
 #cont a{
-    width: calc(50% - 5px);
+    width: calc(30% - 5px);
     margin-bottom: 10px;
 }
 #cont2 a{
@@ -245,10 +250,10 @@ body{
     }
 }
 
-#itemA{grid-area: itemA; border-radius: 50%;}
+#itemA{grid-area: itemA;}
 #itemB{grid-area: itemB; padding: 10px;}
-#itemC{grid-area: itemC; padding: 10px;}
-#itemC p{margin: 0;}
+#itemC{grid-area: itemC; padding: 10px; text-align: justify;}
+#itemC p{margin: 0; padding-right: 3%!important; padding-left: 3%!important;}
 
 #item0{grid-area: item0; padding: 10px;}
 #item1{grid-area: item1; padding: 10px; display: flex; flex-direction: column; height: 100%; align-items: start;}
@@ -266,51 +271,54 @@ body{
         justify-content: start; height: 100%;}
 #item11{grid-column: 1 / 6; padding: 10px;}
 
-.skills:hover{background-color: rgba(139, 139, 139, 0.453);}
-#skill0{grid-area: skill0; padding: 10px; text-align: center; font-size:17px;}
-#skill1{grid-area: skill1; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill2{grid-area: skill2; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill3{grid-area: skill3; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill4{grid-area: skill4; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill5{grid-area: skill5; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill6{grid-area: skill6; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill7{grid-area: skill7; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill8{grid-area: skill8; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill9{grid-area: skill9; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-#skill10{grid-area: skill10; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+.skills{display: flex; flex-direction: column;align-items: center; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
+.skills:hover{background-color: rgba(0, 0, 0, 0.453);}
+.skills:hover .techIcon{transform: scale(1.25);}
+.techIcon{width: 40px;height: auto;transition: all 0.5s;}
+#skill0 {grid-area: skill0; padding: 10px; text-align: center; font-size:17px;}
+#skill1 {grid-area: skill1; }
+#skill2 {grid-area: skill2; }
+#skill3 {grid-area: skill3; }
+#skill4 {grid-area: skill4; }
+#skill5 {grid-area: skill5; }
+#skill6 {grid-area: skill6; }
+#skill7 {grid-area: skill7; }
+#skill8 {grid-area: skill8; }
+#skill9 {grid-area: skill9; }
+#skill10{grid-area: skill10;}
 
 /*Estilos*/
 
 #itemA {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 0%;
     position: relative;
     overflow: hidden;
     background-size: cover;
 }
 
 #itemA img{
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: auto;
+    border-radius: 0%;
     filter: brightness(0.7);
     transition: 1s all;
 }
 
 
 #itemA:hover {
-    scale: 1.5;
     z-index: 500;
     border-radius: 2.5%;
-    transform: translate(-25%, 25%);
 }
 #itemA:hover img{
-    filter: brightness(0.85);
+    filter: brightness(0.8);
 }
 
 
 .titulo{
     text-align: center;
+    height: 100%;
     font-size: 19px;
     margin: 0;
 }
