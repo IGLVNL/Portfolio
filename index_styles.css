@@ -1,6 +1,6 @@
 /*LayOut*/
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url("img/1119461.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url("img/1119461.jpg");
     background-attachment: fixed;
     background-size: cover;
     letter-spacing: 1px;
@@ -21,12 +21,11 @@ body{
 
 #portrait{
     display: grid;
-    padding: 50px;
-    padding-left: 20%;
+    padding: 20px;
     grid-template-columns: repeat(4,auto);
-    grid-template-areas: '. itemB itemB itemA '
-                        ' .itemC itemC itemA ';
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("img/Fondo_00.jpeg");
+    grid-template-areas:'itemB itemB itemB itemA'
+                        'itemC itemC itemC itemA';
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url("img/Fondo_00.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0% 45%;
@@ -39,7 +38,7 @@ body{
     grid-template-columns: repeat(2,auto);
     grid-template-areas: 'item0 item0'
                          'item1 item10'
-                         'item1 item10'
+                         'item9 item9'
                          'item6 item6'
                          'item7 item7'
                          'item2 item2'
@@ -60,7 +59,7 @@ body{
     display: grid;
     justify-content: center;
     align-items: center;
-    background-color: rgba(169, 169, 169, 0.485);
+    background-color: rgba(133, 133, 133, 0.485);
     overflow: hidden;
     transition: 0.25s;
     position: relative;
@@ -208,18 +207,27 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+#cont,#cont2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-#cont a {
+#cont a{
     width: calc(50% - 5px);
     margin-bottom: 10px;
 }
+#cont2 a{
+    width: calc(12.5% - 5px);
+    margin-bottom: 10px;
+}
 
-#cont a:hover {
+#cont a:hover,#cont2 a:hover{
     transform: scale(1.05);
     transition-duration: 0.25s;
 }
 
-#cont a img{width: 100%; height: 100%;}
+#cont a img,#cont2 a img{width: 100%; height: 100%;}
 
 
 
@@ -252,9 +260,10 @@ body{
 #item6{grid-area: item6; padding: 10px;}
 #item7{grid-area: item7; padding: 10px;}
 #item8{grid-area: item8; padding: 10px;}
-#item9{grid-area: item9; padding: 10px;}
+#item9{grid-area: item9; padding: 10px; display: flex; flex-direction: column; 
+        justify-content: start; height: 100%;}
 #item10{grid-area: item10; padding: 10px; display: flex; flex-direction: column; 
-        justify-content: start; height: 100%; }
+        justify-content: start; height: 100%;}
 #item11{grid-column: 1 / 6; padding: 10px;}
 
 .skills:hover{background-color: rgba(139, 139, 139, 0.453);}
@@ -273,23 +282,31 @@ body{
 /*Estilos*/
 
 #itemA {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.243),rgba(0, 0, 0, 0.243)),  url("img/000111111.png");
     background-size: cover;
+}
+
+#itemA img{
+    width: 250px;
+    height: 250px;
+    filter: brightness(0.7);
+    transition: 1s all;
 }
 
 
 #itemA:hover {
-    scale: 2.5;
+    scale: 1.5;
     z-index: 500;
     border-radius: 2.5%;
-    transform: translate(-25%, 35%);
+    transform: translate(-25%, 25%);
 }
-
+#itemA:hover img{
+    filter: brightness(0.85);
+}
 
 
 .titulo{

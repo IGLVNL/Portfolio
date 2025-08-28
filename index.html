@@ -15,7 +15,7 @@
 <body>
     <div class="grid-container">
         <div class="grid-item" id="portrait">
-            <div class="port" id="itemA"></div>
+            <div class="port" id="itemA"><img src="img/000111111.png" alt=""></div>
             <div class="port" id="itemB">
                 <span class="span1"></span>
                 <span class="span2"></span>
@@ -28,7 +28,8 @@
                 <span class="span2"></span>
                 <span class="span3"></span>
                 <span class="span4"></span>
-                <p style="font-size: 19px;">Curriculum / Porfolio de proyectos</p>
+                <p class="titulo">Curriculum / Porfolio de proyectos</p>
+                <br><br><p>Hola, mi nombre es Ignacio, soy programador con formación en ingeniería y una fuerte motivación por el mundo del software y la tecnologías aplicadas. Mi recorrido profesional incluye experiencias en entornos industriales y proyectos en programación, lo que me permitió conectar la lógica de procesos con el desarrollo tecnológico. Me enfoco especialmente en el desarrollo web (Front-End y Back-End), el manejo de bases de datos SQL y la creación de aplicaciones tanto móviles como de escritorio. Estoy en constante búsqueda de nuevas herramientas y conocimientos que me permitan mejorar como desarrollador y aportar soluciones prácticas en distintos contextos.</p>
             </div>
         </div>
         <div class="grid-item" id="info-personal">
@@ -36,15 +37,13 @@
                 <p><u>Información personal</u></p>
             </div>
             <div class="infoPers" id="item1">
-                <p class="parrafo"><u>Presentación personal</u>
-                <br><br>Hola, mi nombre es Ignacio, tengo <span id="edad1"></span> años y vivo en Palermo, CABA. Soy programador y estudiante avanzado de la carrera Ingeniería Industrial y estudiante inicial de Ingenieria en sistemas de informacion, apasionado y conocedor tanto en el area la industria como en el area de sistemas. Mi viaje profesional ha abarcado desde los procesos industriales en empresas manufactureras, hasta la realización de proyectos en el area de la programación. Mi formación en Ingeniería Industrial me ha proporcionado una sólida base en ciencias duras y tecnologias aplicadas, así como en la gestión de las areas principales de una organizacion y el buén desarrollo de proyectos. Estas habilidades son transferibles y permiten abordar problemas en otras areas como el desarrollo, de manera efectiva. A medida que me sumergí en el desarrollo, descubrí una pasión por aprender cada día más sobre esta amplia disciplina, incluyendo desarrollo web Front-End y Back-End, manejo de bases de datos SQL, desarrollo de aplicaciones Android, aplicaciones de escritorio con Java y C#.</p>
                 <p class="parrafo"><u>Datos personales</u>
                 <br><br>Nombre y apellido: Ignacio Gabriel López Velázquez
                 <br>Fecha de nacimiento: 19-06-1990
                 <br>Edad: <span id="edad2"></span> años
                 <br>DNI: 35348759
                 <br>Nacionalidad: argentino (Moreno-Bs. As.)
-                <br>Domicilio: Palermo/CABA
+                <br>Domicilio: Villa Crespo/CABA
                 <br>Estado civil: soltero
                 <br>Hijos: No
                 <br>CUIL: 20-35348759-1
@@ -63,10 +62,12 @@
                     <a rel="noopener" target="_blank" href="https://cienciaingenieria.netlify.app/"><img src="icon/IconoPagina002.png" alt="Ciencia e ingeniería" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Blog personal donde progresivamente voy plasmando los temas abordados en mi carrera. <br>Tecnologias aplicadas: javascript, HTML, CSS"></a>
                 </div>
                 <br>
-                <p><u>Prácticas</u></p>
-                <p>(Prácticas iniciales en programacion web Front-end)</p>
+            </div>
+            <div class="infoIT" id="item9">
+                <p class="parrafo"><u>Prácticas</u></p>
+                <p><u>(Prácticas iniciales en programacion web Front-end)</u></p>
                 <br>
-                <div id="cont">
+                <div id="cont2">
                     <a rel="noopener" target="_blank" href="https://primerpaginacac.netlify.app"><img src="icon/codoacodo.png" alt="Mi primer pagina"></a>
                     <a rel="noopener" target="_blank" href="https://oradorescac.netlify.app"><img src="icon/Oradores.png" alt="Pagina de Oradores"></a>
                     <a rel="noopener" target="_blank" href="https://restauranteregional.netlify.app"><img src="icon/Restaurante.png" alt=" Restaurante regional"></a>
@@ -208,7 +209,6 @@
 </html>
 <script>
     let edad = new Date().getFullYear() - 1990;
-    document.getElementById("edad1").textContent = edad;
     document.getElementById("edad2").textContent = edad;
     document.addEventListener('DOMContentLoaded', function () {
       const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
