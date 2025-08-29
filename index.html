@@ -13,6 +13,7 @@
     
 </head>
 <body>
+    <button id="up" type="button" title="Up"><img src="icon/up-circle-svgrepo-com.svg" alt=""></button>
     <div class="grid-container">
         <div class="grid-item" id="portrait">
             <div class="port" id="itemA"><img src="img/000111111.png" alt=""></div>
@@ -26,7 +27,7 @@
                 <br>
                 <br>
                 <br>
-                <p class="titulo">Ignacio Gabriel Lopez Velazquez</p>
+                <p class="titulo" style="font-size: 30px;">Ignacio Gabriel Lopez Velazquez</p>
                 <br>
                 <br>
                 <br>
@@ -37,7 +38,7 @@
                 <span class="span2"></span>
                 <span class="span3"></span>
                 <span class="span4"></span>
-                <p class="titulo">Curriculum / Porfolio de proyectos</p>
+                <p class="titulo"><u>Curriculum / Porfolio de proyectos</u></p>
                 <p>Hola, mi nombre es Ignacio, soy programador con formación en ingeniería y una fuerte motivación por el desarrollo de software y tecnologías aplicadas. Mi recorrido profesional incluye experiencias en entornos industriales y proyectos en programación, lo que me permitió conectar la lógica de procesos con el desarrollo tecnológico. Me enfoco especialmente en el desarrollo web (Front-End y Back-End), el manejo de bases de datos SQL y la creación de aplicaciones tanto móviles como de escritorio. Estoy en constante búsqueda de nuevas herramientas y conocimientos que me permitan mejorar como desarrollador y aportar soluciones prácticas en distintos contextos.</p>
             </div>
         </div>
@@ -46,7 +47,8 @@
                 <p><u>Información personal</u></p>
             </div>
             <div class="infoPers" id="item1">
-                <p class="parrafo"><u>Datos personales</u>
+                <p class="parrafo">
+                <u class="Subtitulo">Datos personales</u>
                 <br><br>Nombre y apellido: Ignacio Gabriel López Velázquez
                 <br>Fecha de nacimiento: 19-06-1990
                 <br>Edad: <span id="edad2"></span> años
@@ -61,9 +63,10 @@
                 <br>E-mail (alternativo): iglvnl.mnj@gmail.com
                 <br>Disponibilidad horaria: Full time - Part time - Pasantía
                 <br>Posibilidad de traslado/mudanza: Si</p>
+                <button type="button" class="btn btn-outline-primary rounded-pill" id="irAContacto">Contacto</button>
             </div>
             <div class="infoIT" id="item10">
-                <p class="parrafo"><u>Proyectos IT</u></p>
+                <p  class="Subtitulo"><u>Proyectos IT</u></p>
                 <br>
                 <div id="cont">
                     <a rel="noopener" target="_blank" href="https://mollysaccesorios.com"><img src="icon/LogoMollys.jpg" alt="Mi primer pagina" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Tienda online diseñada para un negocio de ventas de accesorios de joyería. <br>Tecnologías aplicadas: PHP, javascript, HTML, CSS y Bootstrap, SQL(CRUD)"></a>
@@ -72,7 +75,7 @@
                 <br>
             </div>
             <div class="infoIT" id="item9">
-                <p class="parrafo"><u>Prácticas</u></p>
+                <p class="parrafo titulo"><u>Prácticas</u></p>
                 <br>
                 <div id="cont2">
                     <a rel="noopener" target="_blank" href="https://primerpaginacac.netlify.app"><img src="icon/codoacodo.png" alt="Mi primer pagina"></a>
@@ -84,89 +87,88 @@
                 </div>
             </div>
             <div class="infoIT" id="item6">
-                <p style="margin: 0; font-size: 19px;"><u>Conocimientos en el area IT</u></p>
+                <p class="parrafo titulo" style="margin: 0;"><u>Skills IT</u></p>
             </div>
             <div id="item7">
-                <h4 id="skill0"><u>Skills IT</u></h4>
                 <div class="skills" id="skill1" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                 "- Aplicaciones de escritorio 
-                 <br>- Manejo de hilos 
-                 <br>- Programación orientada a objetos 
-                 <br>- Conexión a bases de datos 
-                 <br>- Gestión de excepciones 
-                 <br>- Desarrollo de interfaces gráficas (GUI)">
-                   <img class="techIcon" src="icon/java-svgrepo-com.svg" alt="">
+                    "- Aplicaciones de escritorio 
+                    <br>- Manejo de hilos 
+                    <br>- Programación orientada a objetos 
+                    <br>- Conexión a bases de datos 
+                    <br>- Gestión de excepciones 
+                    <br>- Desarrollo de interfaces gráficas (GUI)">
+                <img class="techIcon" src="icon/java-svgrepo-com.svg" alt="">
                     Java
-                  </div>
-                  <div class="skills" id="skill2" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                  "- Estructuración web 
-                   <br>- Uso de semántica HTML5 
-                   <br>- Creación de formularios 
-                   <br>- Inclusión de multimedia">
-                   <img class="techIcon" src="icon/html-5-svgrepo-com.svg" alt="">
+                </div>
+                <div class="skills" id="skill2" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Estructuración web 
+                    <br>- Uso de semántica HTML5 
+                    <br>- Creación de formularios 
+                    <br>- Inclusión de multimedia">
+                <img class="techIcon" src="icon/html-5-svgrepo-com.svg" alt="">
                     HTML
-                  </div>
-                  <div class="skills" id="skill3" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                  "- Estilización avanzada 
-                   <br>- Flexbox y Grid 
-                   <br>- Animaciones y transiciones 
-                   <br>- Diseño responsive">
-                   <img class="techIcon" src="icon/css-3-svgrepo-com.svg" alt="">
+                </div>
+                <div class="skills" id="skill3" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Estilización avanzada 
+                    <br>- Flexbox y Grid 
+                    <br>- Animaciones y transiciones 
+                    <br>- Diseño responsive">
+                <img class="techIcon" src="icon/css-3-svgrepo-com.svg" alt="">
                     CSS
-                  </div>
-                  <div class="skills" id="skill4" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                  "- Interfaces dinámicas 
-                   <br>- Manipulación del DOM 
-                   <br>- Programación asíncrona (Promesas y async/await) 
-                   <br>- Manejo de eventos 
-                   <br>- Interacción con APIs">
-                   <img class="techIcon" src="icon/javascript-svgrepo-com.svg" alt="">
+                </div>
+                <div class="skills" id="skill4" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Interfaces dinámicas 
+                    <br>- Manipulación del DOM 
+                    <br>- Programación asíncrona (Promesas y async/await) 
+                    <br>- Manejo de eventos 
+                    <br>- Interacción con APIs">
+                <img class="techIcon" src="icon/javascript-svgrepo-com.svg" alt="">
                     Javascript
-                  </div>
-                  <div class="skills" id="skill5" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                  "- Backend 
-                   <br>- Conexión a bases de datos (CRUD)
-                   <br>- Manejo de sesiones y cookies 
-                   <br>- Programación orientada a objetos ">
-                   <img class="techIcon" src="icon/php-svgrepo-com.svg" alt="">
+                </div>
+                <div class="skills" id="skill5" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Backend 
+                    <br>- Conexión a bases de datos (CRUD)
+                    <br>- Manejo de sesiones y cookies 
+                    <br>- Programación orientada a objetos ">
+                <img class="techIcon" src="icon/php-svgrepo-com.svg" alt="">
                     PHP
-                  </div>
-                  <div class="skills" id="skill6" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                  "- Consultas SQL 
-                   <br>- Gestión de bases de datos 
-                   <br>- Normalización de datos 
-                   <br>- Creación de tablas y relaciones">
-                   <img class="techIcon" src="icon/sql-svgrepo-com.svg" alt="">
+                </div>
+                <div class="skills" id="skill6" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Consultas SQL 
+                    <br>- Gestión de bases de datos 
+                    <br>- Normalización de datos 
+                    <br>- Creación de tablas y relaciones">
+                <img class="techIcon" src="icon/sql-svgrepo-com.svg" alt="">
                     SQL
-                  </div>
-                  <div class="skills" id="skill7" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                  "- Control de versiones 
-                   <br>- Colaboración en proyectos 
-                   <br>- Creación y manejo de ramas 
-                   <br>- Uso de repositorios remotos (GitHub, GitLab)">
-                   <img class="techIcon" src="icon/git-svgrepo-com.svg" alt="">
+                </div>
+                <div class="skills" id="skill7" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Control de versiones 
+                    <br>- Colaboración en proyectos 
+                    <br>- Creación y manejo de ramas 
+                    <br>- Uso de repositorios remotos (GitHub, GitLab)">
+                <img class="techIcon" src="icon/git-svgrepo-com.svg" alt="">
                     GIT
-                  </div>
-                  <div class="skills" id="skill8" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                  "- Desarrollo con Unity 
+                </div>
+                <div class="skills" id="skill8" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Desarrollo con Unity 
                     <br>- Programación orientada a objetos 
                     <br>- Clean Coding 
                     <br>- Creación de scripts para videojuegos 
                     <br>- Uso de componentes y assets 
                     <br>- Debugging y optimización de juegos">
-                   <img class="techIcon" src="icon/c-sharp-svgrepo-com.svg" alt="">
+                <img class="techIcon" src="icon/c-sharp-svgrepo-com.svg" alt="">
                     C#
-                  </div>
-                  <div class="skills" id="skill9" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                  "- Desarrollo Android 
+                </div>
+                <div class="skills" id="skill9" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Desarrollo Android 
                     <br>- Interacción con APIs 
                     <br>- Manejo de activities
                     <br>- Creación de interfaces de usuario 
                     <br>- Almacenamiento de datos local (SQLite)">
-                   <img class="techIcon" src="icon/android-svgrepo-com.svg" alt="">
+                <img class="techIcon" src="icon/android-svgrepo-com.svg" alt="">
                     Android
-                  </div>
-                  <div class="skills" id="skill10" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                </div>
+                <div class="skills" id="skill10" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
                     "- Diseño de interfaces responsivas
                     <br>- Uso de componentes predefinidos
                     <br>- Creación de formularios y validaciones
@@ -175,23 +177,23 @@
                     <br>- Compatibilidad cross-browser
                     <br>- Optimización para rendimiento web
                     <br>- Creación de layouts utilizando el grid system">
-                   <img class="techIcon" src="icon/bootstrap-fill-svgrepo-com.svg" alt="">
+                <img class="techIcon" src="icon/bootstrap-fill-svgrepo-com.svg" alt="">
                     Bootstrap
                 </div>
             </div>
             <div class="infoPers" id="item4">
-                <p class="parrafo"><u>Formación académica</u>
+                <p class="parrafo"><u class="Subtitulo">Formación académica</u>
                 <br><br>- Estudios secundarios: completos (2009) - E.T.A.M. (Escuela Técnica Alemana Moreno)
                 <br>- Títulos: Técnico en equipos e instalaciones electromecánicas (E.T.A.M.) y Bachiller modalidad Producción de Bienes y Servicios (E.T.A.M.)
                 <br>- Quinto año de Ingeniería industrial (UNlu)
                 <br>- Primer año de Ingeniería en sistemas  de información (UTN - FRBA)
-                <br>- Curso de Inglés (nivel intermedio)
-                <br>- Curso de Excel (nivel intermedio)
-                <br>- Curso de AutoCAD (nivel intermedio)
-                <br>- Curso de automatización Electro-Neumática de equipos e instalaciones
-                <br>- Curso de capacitación en Seguridad industrial
-                <br><br><u>Competencias</u>
-                <br>- Mantenimiento y reparación de equipos en general
+                <br>- Curso de Inglés (Stratford institute)
+                <br>- Curso de Excel (E.T.A.M.)
+                <br>- Curso de AutoCAD (E.T.A.M.)
+                <br>- Curso de automatización Electro-Neumática de equipos e instalaciones (Unilever)
+                <br>- Curso de capacitación en Seguridad industrial (Gulf / UNLu)
+                <br><br><u class="Subtitulo">Competencias</u>
+                <br>- Mantenimiento y reparación de equipos e instalaciones
                 <br>- Programación CNC
                 <br>- Control Estadístico de Procesos
                 <br>- Planificación de la producción (M.R.P.)
@@ -200,12 +202,12 @@
                 <br>- Realización de ensayos de materiales (Dureza, Tracción, Metalografías, E.N.D., etc.)</p>  
             </div>
             <div class="infoPers" id="item5">
-                <p class="parrafo"><u>Experiencia laboral en industria</u>
+                <p class="parrafo"><u class="Subtitulo">Experiencia laboral en industria</u>
                 <br><br>- Operario de producción (Unilever s.a. - 2011)
                 <br>- Operario de mantenimiento (Rio Chico s.a. - 2013)
                 <br>- Operario de producción/mantenimiento (Gulf Oil s.a. - 2018 a 2019)
                 <br>- Dibujante Cadista y Responsable de Compras (Data entry) (Fiemel s.a. - 2019 a 2020)
-                <br><br><u>Experiencia laboral independiente</u>
+                <br><br><u class="Subtitulo">Experiencia laboral independiente</u>
                 <br>- Mantenimiento y diseño de instalaciones eléctricas (2009 a 2021)
                 <br>- Dibujante Cadista de redes y estructuras (2009 a 2020)
                 <br><br><u>Otra experiencia laboral</u>
@@ -214,14 +216,63 @@
         </div>
         <div class="grid-item" id="footer">
             <div class="foot" id="item11">
-                <p id="ti"><u>Redes sociales</u></p>
+                <p id="ti" class="titulo"><u>Contacto</u></p>
                 <a class="iconos" rel="noopener" target="_blank" id="fb" href="https://www.facebook.com/?ref=homescreenpwa"><img src="icon/facebook-svgrepo-com.svg" alt="Facebook"></a>
-                <!--a class="iconos" rel="noopener" target="_blank" id="yt" href="https://youtube.com/@cienciaeingenieriaatualcan6?si=EO_D1lfM8WarG8wR"><img src="icon/youtube_icon.png" alt="Canal de YouTube"></a-->
+                <a class="iconos" rel="noopener" target="_blank" id="ig" href="https://www.instagram.com/ignaciogabrielopez/"><img src="icon/instagram-svgrepo-com.svg" alt="Instagram"></a>
+                <a class="iconos" rel="noopener" target="_blank" id="mail"  data-bs-toggle="modal" data-bs-target="#modalMail" data-bs-whatever="@getbootstrap"href=""><img src="icon/mail-reception-svgrepo-com.svg" alt="Instagram"></a>
                 <a class="iconos" rel="noopener" target="_blank" id="ln" href="https://www.linkedin.com/in/ignacio-gabriel-lopez-velazquez-462870163/"><img src="icon/linkedin-svgrepo-com (3).svg" alt="LinkedIn"></a>
                 <a class="iconos" rel="noopener" target="_blank" id="wp" href="https://api.whatsapp.com/send?phone=541168553317"><img src="icon/whatsapp-svgrepo-com.svg" alt="WhatsApp"></a>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="modalMail" tabindex="-1" aria-labelledby="modalMailLabel" aria-hidden="true"><!--Modal Mail-->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalMailLabel">Envíame un e-mail:</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+            <div class="modal-body">
+                <form id="contact-form">
+                    <div class="mb-1">
+                        <label for="recipient-name" class="col-form-label">Tu nombre:</label>
+                        <input type="text" class="form-control" id="recipient-name" required name="name">
+                    </div>
+                    <div class="mb-1">
+                        <label for="recipient-name" class="col-form-label">Tu e-mail:</label>
+                        <input type="text" class="form-control" id="email-name" required name="email">
+                    </div>
+                    <div class="mb-1">
+                        <label for="message-text" class="col-form-label">Asunto:</label>
+                        <input class="form-control" id="asunto-text" required name="title"></input>
+                    </div>
+                    <div class="mb-1">
+                        <label for="message-text" class="col-form-label">Mensaje:</label>
+                        <textarea class="form-control" id="message-text" required name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("knEUTDSMybhJBUBm_");
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        emailjs.sendForm('service_sjzyjkw', 'template_po2hbv9', this)
+        .then(() => {
+            alert('¡Correo enviado con éxito!');
+            this.reset();
+            const modalElement = document.getElementById('modalMail');
+            const modalInstance = bootstrap.Modal.getInstance(modalElement);
+            modalInstance.hide();
+        }, err => { alert('Error al enviar: ' + err.text);});
+        });
+    })();
+</script>
 </body>
 </html>
 <script>
@@ -230,5 +281,30 @@
     document.addEventListener('DOMContentLoaded', function () {
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
         const tooltipList = Array.from(tooltipTriggerList).map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    });
+
+    document.getElementById('irAContacto').addEventListener('click', function () {
+    document.getElementById('ti').scrollIntoView({
+        behavior: 'auto'
+        });
+    });
+    
+
+    window.addEventListener('scroll', function () {
+    const botonUp = document.getElementById('up');
+    const scrollActual = window.scrollY;
+    const alturaTotal = document.body.scrollHeight - window.innerHeight;
+
+    if (scrollActual > alturaTotal * 0.1) {
+        botonUp.classList.remove('hidden');
+        } else {
+        botonUp.classList.add('hidden');
+        }
+    });
+
+    document.getElementById('up').addEventListener('click', function () {
+    document.getElementById('itemA').scrollIntoView({
+        behavior: 'auto'
+        });
     });
 </script>
