@@ -73,7 +73,7 @@ p{
     padding: 0;
     grid-template-columns: repeat(7,auto);
     grid-template-areas:'itemB itemB itemB itemB itemB itemA itemA'
-                        'itemB itemB itemB itemB itemB itemA itemA'
+                        'itemC itemC itemC itemC itemC itemC itemC'
                         'itemC itemC itemC itemC itemC itemC itemC';
     background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url("img/Fondo_00.jpeg");
     background-size: cover;
@@ -217,7 +217,8 @@ p{
     background-color: rgba(87, 87, 87, 0.485);
     grid-template-columns: repeat(5,auto);
     grid-template-areas:    'skill1 skill2 skill3 skill4 skill5 '
-                            'skill6 skill7 skill8 skill9 skill10';
+                            'skill6 skill7 skill8 skill9 skill10'
+                            '. . skill11 . .';
 }
 
 .foot{
@@ -333,6 +334,7 @@ p{
 #skill8 {grid-area: skill8; }
 #skill9 {grid-area: skill9; }
 #skill10{grid-area: skill10;}
+#skill11{grid-area: skill11;}
 
 /*Estilos*/
 
