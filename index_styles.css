@@ -23,6 +23,11 @@
     font-weight: 700;
     font-style: oblique;
 }
+
+.tooltip.fade {
+  transition: opacity 0.2s ease-in-out; /* ajustá la duración a tu gusto */
+}
+
 #up.hidden {
     display: none;
 }
@@ -40,6 +45,10 @@
 #up img{
     width: 100%;
     height: 100%;
+    transition: transform 0.25s;
+}
+#up img:hover{
+    transform: scale(1.2);
 }
 body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url("img/1119461.jpg");

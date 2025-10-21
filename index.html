@@ -71,7 +71,7 @@
                 <p  class="Subtitulo"><u>Proyectos IT</u></p>
                 <br>
                 <div id="cont">
-                    <a rel="noopener" target="_blank" href="https://mollysaccesorios.com"><img src="icon/LogoMollys.jpg" alt="Mi primer pagina" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Tienda online diseñada para un negocio de ventas de accesorios de joyería. <br>Tecnologías aplicadas: PHP, javascript, HTML, CSS y Bootstrap, SQL(CRUD)"></a>
+                    <a rel="noopener" target="_blank" href="https://mollysaccesorios.com"><img src="icon/LogoMollys.jpg" alt="Mi primer pagina" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Tienda online diseñada para un negocio de ventas de accesorios de joyería. <br>Tecnologías aplicadas: PHP, javascript, HTML, CSS y Bootstrap, SQL"></a>
                     <a rel="noopener" target="_blank" href="https://cienciaingenieria.netlify.app/"><img src="icon/IconoPagina002.png" alt="Ciencia e ingeniería" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Blog personal donde progresivamente voy plasmando los temas abordados en mi carrera. <br>Tecnologías aplicadas: javascript, HTML, CSS"></a>
                 </div>
                 <br>
@@ -293,8 +293,13 @@
     let edad = new Date().getFullYear() - 1990;
     document.getElementById("edad2").textContent = edad;
     document.addEventListener('DOMContentLoaded', function () {
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
-        const tooltipList = Array.from(tooltipTriggerList).map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = Array.from(tooltipTriggerList).map(tooltipTriggerEl => 
+        new bootstrap.Tooltip(tooltipTriggerEl, {
+            animation: true,       // activa animación (ya viene true por defecto)
+            customClass: 'fade'    // fuerza la clase fade para transición
+            })
+        );
     });
 
     document.getElementById('irAContacto').addEventListener('click', function () {
