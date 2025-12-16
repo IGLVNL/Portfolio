@@ -31,6 +31,7 @@
 #up.hidden {
     display: none;
 }
+
 #up{
     display: flex;
     position: fixed;
@@ -42,255 +43,128 @@
     right: 10px;
     top: 10px;
 }
+
 #up img{
     width: 100%;
     height: 100%;
     transition: transform 0.25s;
 }
+
 #up img:hover{
     transform: scale(1.2);
 }
+
 body{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url("img/1119461.jpg");
+    background: rgba(17, 17, 17, 0.91) !important;
     background-attachment: fixed;
     background-size: cover;
     color: white !important;
     padding: 2px;
 }
-p{
-    margin: 0% !important;
-    padding: 10px !important;
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4% 0%;
+}
+
+.header img{
+    width: 25%;
+    margin-bottom: 4%;
+    border-radius: 5%;
+}
+
+/*ACORDEONES*/
+.accordion .accordion-button {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between;
+    background: rgba(42, 42, 42, 0.91) !important;
+    color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease-in-out;
+}
+.accordion .accordion-button:hover {
+    background: rgba(42, 42, 42, 0.94) !important;
+    color: #fff68f !important;
+}
+.accordion .accordion-button::after {
+    filter: invert(1) brightness(1.2);
+}
+.accordion .accordion-button.collapsed:hover {
+    background: rgba(42, 42, 42, 0.96) !important;
+    color: #fff68f !important;
+}
+.accordion .accordion-collapse .accordion-body {
+    background: rgba(24, 24, 24, 0.91) !important;
+    color: #ffffff;
+    transition: all 0.3s ease-in-out;
     font-family: "Nueva fuente personalizada";
     font-style: normal;
-    letter-spacing: -1px;
-    font-size: 16px;
+    font-size: 17px;
+}
+.accordion .accordion-collapse .accordion-body:hover {
+    background: rgba(42, 42, 42, 0.96) !important;
+    color: #fff68f !important;
+}
+/*ACORDEONES*/
+
+/*PROYECTOS IT, SKILLS, CONTACTO*/
+#collapse3 .accordion-body, #collapse6 .accordion-body, #collapse9 .accordion-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.grid-container{
-    display: grid;
-    grid-template-columns: auto;
-    gap: 10px;
-}
-
-.grid-item{
-    gap: 5px;
-    align-items: start;
-}
-
-#portrait{
-    display: grid;
-    padding: 0;
-    grid-template-columns: repeat(7,auto);
-    grid-template-areas:'itemB itemB itemB itemB itemB itemA itemA'
-                        'itemC itemC itemC itemC itemC itemC itemC'
-                        'itemC itemC itemC itemC itemC itemC itemC';
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)), url("img/Fondo_00.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0% 45%;
-    background-attachment: fixed;
-}
-
-#info-personal{
-    display: grid;
-    justify-content: start;
-    grid-template-columns: repeat(2,auto);
-    grid-template-areas:'item0 item0'
-                        'item1 item10'
-                        'item6 item6'
-                        'item7 item7'
-                        'item9 item9'
-                        'item2 item2'
-                        'item4 item5';
-}
-
-
-.parrafo{
-    padding: 3%;
+#collapse3 .accordion-body a,.skills{
+    width: 100px !important;
     height: fit-content;
+    margin: 15px 15px;
+    border-color: transparent;
+    text-align: center;
 }
+
+#collapse9 .accordion-body a{
+    width: 50px;
+    height: fit-content;
+    margin: 15px 15px;
+    border-color: transparent;
+}
+
+#collapse3 .accordion-body a img, #collapse9 .accordion-body a img{
+    width: 100%;
+}
+
+.skills img{
+    width: 100%!important;
+    height: 80%!important;
+}
+/*PROYECTOS IT, SKILLS, CONTACTO*/
 
 #footer{
     display: grid;
     grid-template-columns: repeat(5,auto);
 }
 
-.port{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(87, 87, 87, 0.485);
-    overflow: hidden;
-    transition: 0.25s;
-    position: relative;
-}
-
-.port:hover, .infoPers:hover, .infoIT:hover, .foot:hover {
-    background-color: rgba(56, 56, 56, 0.217); 
+.foot:hover {
+    background: rgba(42, 42, 42, 0.96) !important;
     color: rgb(239, 255, 159);
     transition-delay: 0.1s;
 
 }
-
-.port span{
-    position: absolute;
-    display: block;
-}
-
-
-.span1{
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(360deg,transparent,rgb(253, 255, 107));
-}
-
-.port:hover .span1{
-    left: 100%;
-    transition: 1s;
-}
-
-.span3{    
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(360deg,transparent,rgb(253, 255, 107));
-}
-
-.port:hover .span3{
-    right: 100%;
-    transition: 1s;
-    transition-delay: 0.5s;
-}
-
-.span2{
-    top: -100%;
-    right: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,rgb(253, 255, 107));
-}
-
-.port:hover .span2{
-    top: 100%;
-    transition: 0.5s;
-    transition-delay: 0.25s;
-}
-
-.span4{
-    bottom: -100%;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,rgb(253, 255, 107));
-}
-
-.port:hover .span4{
-    bottom: 100%;
-    transition: 0.5s;
-    transition-delay: 0.75s;
-}
-
-.infoPers{
-    display: grid;
-    background-color: rgba(87, 87, 87, 0.485);
-    overflow: hidden;
-    transition: 0.25s;
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    position: relative;
-}
-
-.infoPers p{
-    margin: 2% 0;
-    text-align: justify;
-}
-
-.infoIT{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(87, 87, 87, 0.485);
-    overflow: hidden;
-    transition: 0.25s;
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    position: relative;
-}
-
-#item7{
-    width: 100%;
-    display: grid;
-    background-color: rgba(87, 87, 87, 0.485);
-    grid-template-columns: repeat(5,auto);
-    grid-template-areas:    'skill1 skill2 skill3 skill4 skill5 '
-                            'skill6 skill7 skill8 skill9 skill10'
-                            '. . skill11 . .';
-}
-
-.foot{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(87, 87, 87, 0.485);
-    overflow: hidden;
-    transition: 0.25s;
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    position: relative;
-    grid-template-columns: repeat(4,auto);
-    grid-template-areas:    'itemT itemT itemT itemT itemT'
-                            'itemF itemL itemM itemY itemW';
-}
-
-#ti{grid-area: itemT; display: flex; justify-content: center; margin-bottom: 10px!important;}
-#fb{grid-area: itemF; display: flex; justify-content: center;}
-#ig{grid-area: itemL; display: flex; justify-content: center;}
-#mail{grid-area: itemM; display: flex; justify-content: center;}
-#ln{grid-area: itemY; display: flex; justify-content: center;}
-#wp{grid-area: itemW; display: flex; justify-content: center;}
-
-.iconos {margin-bottom: 40px;}
-.iconos img{width: 20%;}
-#ln{width: 90%;}
 
 .iconos img:hover{animation: Escalar 1.5s infinite;}
 
 .modal{
     background-color: rgba(0, 0, 0, 0.288);
 }
+
 .modal-body,.modal-header,.modal-footer{
     background-color: rgba(69, 69, 69, 0.892)!important;
 }
-
-#cont{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-#cont,#cont2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-#cont a{
-    width: calc(30% - 5px);
-    margin-bottom: 10px;
-}
-#cont2 a{
-    width: calc(12.5% - 5px);
-    margin-bottom: 10px;
-}
-
-#cont a:hover,#cont2 a:hover{
-    transform: scale(1.05);
-    transition-duration: 0.25s;
-}
-
-#cont a img,#cont2 a img{width: 100%; height: 100%;}
 
 
 @keyframes Escalar {
@@ -307,156 +181,27 @@ p{
     }
 }
 
-#itemA{grid-area: itemA;}
-#itemB{grid-area: itemB; padding: 10px;}
-#itemC{grid-area: itemC; padding: 10px; text-align: justify;}
-#itemC p{margin: 0; padding-right: 3%!important; padding-left: 3%!important;}
-
-#item0{grid-area: item0; padding: 10px;}
-#item1{grid-area: item1; padding: 10px; display: flex; flex-direction: column; height: 100%; align-items: start;}
-#item2{grid-area: item2; padding: 10px;}
-#item3{grid-area: item3; padding: 10px;}
-#item4{grid-area: item4; padding: 10px;}
-#item5{grid-area: item5; padding: 10px;display: flex; flex-direction: column; height: 100%; }
-
-#item6{grid-area: item6; padding: 10px;}
-#item7{grid-area: item7; padding: 10px;}
-#item8{grid-area: item8; padding: 10px;}
-#item9{grid-area: item9; padding: 10px; display: flex; flex-direction: column; 
-        justify-content: start; height: 100%;}
-#item10{grid-area: item10; padding: 10px; display: flex; flex-direction: column; 
-        justify-content: start; height: 100%;}
-#item11{grid-column: 1 / 6; padding: 10px;}
-
-.skills{display: flex; flex-direction: column;align-items: center; padding: 10px; text-align: center; border: 1px solid #fff7f5;}
-.skills:hover{background-color: rgba(0, 0, 0, 0.453);}
-.skills:hover .techIcon{transform: scale(1.25);}
-.techIcon{width: 40px;height: auto;transition: all 0.5s;}
-#skill0 {grid-area: skill0; padding: 10px; text-align: center; font-size:17px;}
-#skill1 {grid-area: skill1; }
-#skill2 {grid-area: skill2; }
-#skill3 {grid-area: skill3; }
-#skill4 {grid-area: skill4; }
-#skill5 {grid-area: skill5; }
-#skill6 {grid-area: skill6; }
-#skill7 {grid-area: skill7; }
-#skill8 {grid-area: skill8; }
-#skill9 {grid-area: skill9; }
-#skill10{grid-area: skill10;}
-#skill11{grid-area: skill11;}
-
 /*Estilos*/
-
-#itemA {
-    width: 100%;
-    height: 100%;
-    border-radius: 0%;
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-}
-
-#itemA img{
-    width: 100%;
-    height: auto;
-    border-radius: 0%;
-    filter: brightness(0.7);
-    transition: 1s all;
-}
-
-
-#itemA:hover {
-    z-index: 500;
-    border-radius: 2.5%;
-}
-#itemA:hover img{
-    filter: brightness(0.8);
-}
-
 
 .titulo{
     text-align: center;
     height: 100%;
     font-size: 23px!important;
     margin: 0;
+    color: white;
+    font-family: "Nueva fuente personalizada";
+    font-style: normal;
 }
 .Subtitulo{
     text-align: center;
     height: fit-content;
     font-size: 19px!important;
+    color: white;
     margin: 0;
-}
-.titulo p {
-    text-align: center;
-    font-size: 23px!important;
-    margin: 0;
+    font-family: "Nueva fuente personalizada";
+    font-style: normal;
 }
 
-@media (max-width: 375px) {
-
-    #port{
-        width: 100%;
-    }
-
-    /*LayOut*/
-    #portrait{
-        grid-template-areas: '. . itemA itemA . . '
-                            '. . itemA itemA . . '
-                            'itemB itemB itemB itemB itemB itemB '
-                            'itemC itemC itemC itemC itemC itemC ';
-        padding-left: 50px;
-    }
-    #info-personal{
-        grid-template-areas:'item0 item0'
-                            'item1 item1'
-                            'item3 item3'
-                            'item10 item10'
-                            'item6 item6'
-                            'item7 item7'
-                            'item2 item2'
-                            'item4 item4'
-                            'item5 item5';
-    }
-    #itemA:hover {
-        scale: 1.75;
-        z-index: 500;
-        border-radius: 2.5%;
-        transform: translate(0%, 10%);
-    }
-
-    #fb img{width: 25%;}
-    #ig img{width: 25%;}
-    #ln img{width: 25%;}
-    #wp img{width: 25%;}
-}
-
-@media (min-width: 376px) and (max-width: 500px) {
-    /*LayOut*/
-    #portrait{
-        grid-template-areas:'itemB itemB itemB itemB itemB itemA '
-                            'itemB itemB itemB itemB itemB itemA '
-                            'itemC itemC itemC itemC itemC itemC ';
-    }
-    #info-personal{
-        grid-template-areas:'item0 item0'
-                            'item1 item1'
-                            'item3 item3'
-                            'item10 item10'
-                            'item6 item6'
-                            'item7 item7'
-                            'item2 item2'
-                            'item4 item4'
-                            'item5 item5';
-    }
-    #itemA:hover {
-        scale: 2.25;
-        z-index: 500;
-        border-radius: 2.5%;
-        transform: translate(-25%, 25%);
-    }
-
-    #fb img{width: 25%;}
-    #ig img{width: 25%;}
-    #ln img{width: 25%;}
-    #wp img{width: 25%;}
+.titulo:hover, .Subtitulo:hover{
+    color: #fff68f !important;
 }

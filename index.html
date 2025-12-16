@@ -13,229 +13,271 @@
     
 </head>
 <body>
-    <button id="up" type="button" title="Up"><img src="icon/up-circle-svgrepo-com.svg" alt=""></button>
-    <div class="grid-container">
-        <div class="grid-item" id="portrait">
-            <div class="port" id="itemA"><img src="img/000111111.png" alt=""></div>
-            <div class="port" id="itemB">
-                <span class="span1"></span>
-                <span class="span2"></span>
-                <span class="span3"></span>
-                <span class="span4"></span>
-                <br>
-                <br>
-                <br>
-                <p class="titulo" style="font-size: 30px;">Ignacio Gabriel Lopez Velazquez</p>
-                <p class="Subtitulo">--- Full stack developer ---</p>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div class="port" id="itemC">
-                <span class="span1"></span>
-                <span class="span2"></span>
-                <span class="span3"></span>
-                <span class="span4"></span>
-                <p class="titulo"><u>Currículum / Porfolio de proyectos</u></p>
-                <p>Hola, mi nombre es Ignacio. Soy programador con formación en ingeniería y una fuerte motivación por el desarrollo de software y las tecnologías aplicadas. Mi experiencia en entornos industriales y proyectos de programación me permitió integrar la lógica de procesos con el desarrollo tecnológico.
-                Actualmente me especializo en desarrollo web con PHP y Laravel, donde disfruto diseñar arquitecturas modulares, crear aplicaciones escalables y optimizar flujos de trabajo tanto en el Front-End como en el Back-End. Tengo experiencia en el manejo de bases de datos SQL, la construcción de APIs RESTful y la implementación de sistemas de autenticación y validación de datos.
-                Mi objetivo es seguir profundizando en el ecosistema de Laravel y PHP, aplicando buenas prácticas y patrones de diseño que me permitan aportar soluciones prácticas, eficientes y sostenibles en distintos contextos
-                </p>
+    <div class="header">
+        <button id="up" type="button" title="Ir arriba" class="hidden"><img src="icon/up-circle-svgrepo-com.svg" alt=""></button>
+        <img src="img/000111111.png"  id="foto" alt="foto">
+        <p class="titulo" style="font-size: 30px;">Ignacio Gabriel Lopez Velazquez</p>
+        <p class="Subtitulo">--- Full stack developer ---</p>
+    </div>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                <p class="titulo">Presentación personal</p>
+            </button>
+            </h2>
+            <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Mi nombre es Ignacio, y soy programador con formación en ingeniería industrial e ingeniería en sistemas de informacion. <br>Mi experiencia en entornos industriales y proyectos de programación me permite integrar la lógica de procesos con el desarrollo tecnológico.
+                    <br>Tengo experiencia en el area de mantenimiento industrial, diseño asistido por computadora (CAD), gestión de compras y mantenimiento eléctrico.
+                    <br>En el area de sistemas, me especializo en desarrollo web con PHP y Laravel. Tengo experiencia en el manejo de bases de datos SQL, la construcción de APIs RESTful y la implementación de sistemas de autenticación y validación de datos.
+                    <br>Por otro lado, cuento con habilidades en desarrollo de aplicaciones móviles Android/IOS y aplicaciones de escritorio con Java y C#.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="grid-item" id="info-personal">
-            <div class="infoPers titulo" id="item0">
-                <p><u>Información personal</u></p>
+    </div>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse1">
+                <p class="titulo">Datos personales</p>
+            </button>
+            </h2>
+            <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <br>Nombre y apellido: Ignacio Gabriel López Velázquez
+                    <br>Fecha de nacimiento: 19-06-1990
+                    <br>Edad: <span id="edad2"></span> años
+                    <br>Nacionalidad: argentino (Moreno-Bs. As.)
+                    <br>Domicilio: Villa Crespo/CABA
+                    <br>Estado civil: soltero
+                    <br>Hijos: No
+                    <br>Monotributo: Si
+                    <br>CUIL: 20-35348759-1
+                    <br>Celular/WhatsApp: 11-68553317
+                    <br>E-mail: ignaciolopezvelazquez@hotmail.com
+                    <br>E-mail (alternativo): iglvnl.mnj@gmail.com
+                    <br>Disponibilidad horaria: Full time
+                    <br>Posibilidad de traslado/mudanza: Si</p>
+                    <button type="button" class="btn btn-outline-primary rounded-pill" id="irAContacto">Contacto</button>
+                </div>
             </div>
-            <div class="infoPers" id="item1">
-                <p class="parrafo">
-                <u class="Subtitulo">Datos personales</u>
-                <br><br>Nombre y apellido: Ignacio Gabriel López Velázquez
-                <br>Fecha de nacimiento: 19-06-1990
-                <br>Edad: <span id="edad2"></span> años
-                <br>DNI: 35348759
-                <br>Nacionalidad: argentino (Moreno-Bs. As.)
-                <br>Domicilio: Villa Crespo/CABA
-                <br>Estado civil: soltero
-                <br>Hijos: No
-                <br>CUIL: 20-35348759-1
-                <br>Celular/WhatsApp: 11-68553317
-                <br>E-mail: ignaciolopezvelazquez@hotmail.com
-                <br>E-mail (alternativo): iglvnl.mnj@gmail.com
-                <br>Disponibilidad horaria: Full time - Part time - Pasantía
-                <br>Posibilidad de traslado/mudanza: Si</p>
-                <button type="button" class="btn btn-outline-primary rounded-pill" id="irAContacto">Contacto</button>
-            </div>
-            <div class="infoIT" id="item10">
-                <p  class="Subtitulo"><u>Proyectos IT</u></p>
-                <br>
-                <div id="cont">
+        </div>
+    </div>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                <p class="titulo">Proyectos IT</p>
+            </button>
+            </h2>
+            <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body" id="proyectos">
                     <a rel="noopener" target="_blank" href="https://mollysaccesorios.com"><img src="icon/LogoMollys.jpg" alt="Mi primer pagina" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Tienda online diseñada para un negocio de ventas de accesorios de joyería. <br>Tecnologías aplicadas: PHP, javascript, HTML, CSS y Bootstrap, SQL"></a>
                     <a rel="noopener" target="_blank" href="https://cienciaingenieria.netlify.app/"><img src="icon/IconoPagina002.png" alt="Ciencia e ingeniería" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title="Blog personal donde progresivamente voy plasmando los temas abordados en mi carrera. <br>Tecnologías aplicadas: javascript, HTML, CSS"></a>
                 </div>
-                <br>
-            </div>
-            <div class="infoIT" id="item9">
-                <p class="parrafo titulo"><u>Prácticas</u></p>
-                <br>
-                <div id="cont2">
-                    <a rel="noopener" target="_blank" href="https://primerpaginacac.netlify.app"><img src="icon/codoacodo.png" alt="Mi primer pagina"></a>
-                    <a rel="noopener" target="_blank" href="https://oradorescac.netlify.app"><img src="icon/Oradores.png" alt="Pagina de Oradores"></a>
-                    <a rel="noopener" target="_blank" href="https://restauranteregional.netlify.app"><img src="icon/Restaurante.png" alt=" Restaurante regional"></a>
-                    <a rel="noopener" target="_blank" href="https://hotelgameriglu.netlify.app"><img src="icon/hotel.png" alt="Hotel gamer"></a>
-                    <a rel="noopener" target="_blank" href="https://practicastecnologias.netlify.app"><img src="icon/Javascript.png" alt="Practicas de javascript"></a>
-                    <a rel="noopener" target="_blank" href="https://github.com/IGLVNL?tab=repositories"><img src="icon/github_PNG68.png" alt="Github"></a>
-                </div>
-            </div>
-            <div class="infoIT" id="item6">
-                <p class="parrafo titulo" style="margin: 0;"><u>Skills IT</u></p>
-            </div>
-            <div id="item7">
-                <div class="skills" id="skill1" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Aplicaciones de escritorio 
-                    <br>- Manejo de hilos 
-                    <br>- Programación orientada a objetos 
-                    <br>- Conexión a bases de datos 
-                    <br>- Gestión de excepciones 
-                    <br>- Desarrollo de interfaces gráficas (GUI)">
-                <img class="techIcon" src="icon/java-svgrepo-com.svg" alt="">
-                    Java
-                </div>
-                <div class="skills" id="skill2" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Estructuración web 
-                    <br>- Uso de semántica HTML5 
-                    <br>- Creación de formularios 
-                    <br>- Inclusión de multimedia">
-                <img class="techIcon" src="icon/html-5-svgrepo-com.svg" alt="">
-                    HTML
-                </div>
-                <div class="skills" id="skill3" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Estilización avanzada 
-                    <br>- Flexbox y Grid 
-                    <br>- Animaciones y transiciones 
-                    <br>- Diseño responsive">
-                <img class="techIcon" src="icon/css-3-svgrepo-com.svg" alt="">
-                    CSS
-                </div>
-                <div class="skills" id="skill4" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Interfaces dinámicas 
-                    <br>- Manipulación del DOM 
-                    <br>- Programación asíncrona (Promesas y async/await) 
-                    <br>- Manejo de eventos 
-                    <br>- Interacción con APIs">
-                <img class="techIcon" src="icon/javascript-svgrepo-com.svg" alt="">
-                    Javascript
-                </div>
-                <div class="skills" id="skill5" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Backend 
-                    <br>- Conexión a bases de datos (CRUD)
-                    <br>- Manejo de sesiones y cookies 
-                    <br>- Programación orientada a objetos ">
-                <img class="techIcon" src="icon/php-svgrepo-com.svg" alt="">
-                    PHP
-                </div>
-                <div class="skills" id="skill6" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Consultas SQL 
-                    <br>- Gestión de bases de datos 
-                    <br>- Normalización de datos 
-                    <br>- Creación de tablas y relaciones">
-                <img class="techIcon" src="icon/sql-svgrepo-com.svg" alt="">
-                    SQL
-                </div>
-                <div class="skills" id="skill7" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Control de versiones 
-                    <br>- Colaboración en proyectos 
-                    <br>- Creación y manejo de ramas 
-                    <br>- Uso de repositorios remotos (GitHub, GitLab)">
-                <img class="techIcon" src="icon/git-svgrepo-com.svg" alt="">
-                    GIT
-                </div>
-                <div class="skills" id="skill8" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Desarrollo con Unity 
-                    <br>- Programación orientada a objetos 
-                    <br>- Clean Coding 
-                    <br>- Creación de scripts para videojuegos 
-                    <br>- Uso de componentes y assets 
-                    <br>- Debugging y optimización de juegos">
-                <img class="techIcon" src="icon/c-sharp-svgrepo-com.svg" alt="">
-                    C#
-                </div>
-                <div class="skills" id="skill9" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Desarrollo Android 
-                    <br>- Interacción con APIs 
-                    <br>- Manejo de activities
-                    <br>- Creación de interfaces de usuario 
-                    <br>- Almacenamiento de datos local (SQLite)">
-                <img class="techIcon" src="icon/android-svgrepo-com.svg" alt="">
-                    Android
-                </div>
-                <div class="skills" id="skill10" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                    "- Diseño de interfaces responsivas
-                    <br>- Uso de componentes predefinidos
-                    <br>- Creación de formularios y validaciones
-                    <br>- Implementación de navegación y menús
-                    <br>- Manejo de modales, tooltips y popovers
-                    <br>- Compatibilidad cross-browser
-                    <br>- Optimización para rendimiento web
-                    <br>- Creación de layouts utilizando el grid system">
-                <img class="techIcon" src="icon/bootstrap-fill-svgrepo-com.svg" alt="">
-                    Bootstrap
-                </div>
-                <div class="skills" id="skill11" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
-                "- Configuración de rutas y controladores
-                    <br>- Creación de vistas con Blade
-                    <br>- Manejo de migraciones y bases de datos
-                    <br>- Uso de Eloquent ORM para consultas
-                    <br>- Validación de formularios en el servidor
-                    <br>- Autenticación básica de usuarios
-                    <br>- Integración de layouts y componentes reutilizables
-                    <br>- Consumo y creación de APIs REST con Laravel">
-                    <img class="techIcon" src="icon/laravel-svgrepo-com.svg" alt="">
-                    Laravel
-                </div>
-            </div>
-            <div class="infoPers" id="item4">
-                <p class="parrafo"><u class="Subtitulo">Formación académica</u>
-                <br><br>- Estudios secundarios: completos (2009) - E.T.A.M. (Escuela Técnica Alemana Moreno)
-                <br>- Títulos: Técnico en equipos e instalaciones electromecánicas (E.T.A.M.) y Bachiller modalidad Producción de Bienes y Servicios (E.T.A.M.)
-                <br>- Quinto año de Ingeniería industrial (UNlu)
-                <br>- Primer año de Ingeniería en sistemas  de información (UTN - FRBA)
-                <br>- Curso de Inglés (Stratford institute)
-                <br>- Curso de Excel (E.T.A.M.)
-                <br>- Curso de AutoCAD (E.T.A.M.)
-                <br>- Curso de automatización Electro-Neumática de equipos e instalaciones (Unilever)
-                <br>- Curso de capacitación en Seguridad industrial (Gulf / UNLu)
-                <br><br><u class="Subtitulo">Competencias</u>
-                <br>- Mantenimiento y reparación de equipos e instalaciones
-                <br>- Programación CNC
-                <br>- Control Estadístico de Procesos
-                <br>- Planificación de la producción (M.R.P.)
-                <br>- Diseño y estudio de Métodos y control de Tiempos de Procesos
-                <br>- Dimensionamiento de redes y equipos eléctricos industriales
-                <br>- Realización de ensayos de materiales (Dureza, Tracción, Metalografías, E.N.D., etc.)</p>  
-            </div>
-            <div class="infoPers" id="item5">
-                <p class="parrafo"><u class="Subtitulo">Experiencia laboral en industria</u>
-                <br><br>- Operario de producción (Unilever s.a. - 2011)
-                <br>- Operario de mantenimiento (Rio Chico s.a. - 2013)
-                <br>- Operario de producción/mantenimiento (Gulf Oil s.a. - 2018 a 2019)
-                <br>- Dibujante Cadista y Responsable de Compras (Data entry) (Fiemel s.a. - 2019 a 2020)
-                <br><br><u class="Subtitulo">Experiencia laboral independiente</u>
-                <br>- Mantenimiento y diseño de instalaciones eléctricas (2009 a 2021)
-                <br>- Dibujante Cadista de redes y estructuras (2009 a 2020)
-                <br><br><u>Otra experiencia laboral</u>
-                <br>- Ayudante de cátedra (UNLu) Introducción a la química - Química general e inorgánica - Química Industrial (2017 al presente)</p>
             </div>
         </div>
-        <div class="grid-item" id="footer">
-            <div class="foot" id="item11">
-                <p id="ti" class="titulo"><u>Contacto</u></p>
-                <a class="iconos" rel="noopener" target="_blank" id="fb" href="https://www.facebook.com/?ref=homescreenpwa"><img src="icon/facebook-svgrepo-com.svg" alt="Facebook"></a>
-                <a class="iconos" rel="noopener" target="_blank" id="ig" href="https://www.instagram.com/ignaciogabrielopez/"><img src="icon/instagram-svgrepo-com.svg" alt="Instagram"></a>
-                <a class="iconos" rel="noopener" target="_blank" id="mail"  data-bs-toggle="modal" data-bs-target="#modalMail" data-bs-whatever="@getbootstrap"href=""><img src="icon/mail-reception-svgrepo-com.svg" alt="Instagram"></a>
-                <a class="iconos" rel="noopener" target="_blank" id="ln" href="https://www.linkedin.com/in/ignacio-gabriel-lopez-velazquez-462870163/"><img src="icon/linkedin-svgrepo-com (3).svg" alt="LinkedIn"></a>
-                <a class="iconos" rel="noopener" target="_blank" id="wp" href="https://api.whatsapp.com/send?phone=541168553317"><img src="icon/whatsapp-svgrepo-com.svg" alt="WhatsApp"></a>
+    </div>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                <p class="titulo">Skills IT</p>
+            </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="skills" id="skill1" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Aplicaciones de escritorio 
+                        <br>- Manejo de hilos 
+                        <br>- Programación orientada a objetos 
+                        <br>- Conexión a bases de datos 
+                        <br>- Gestión de excepciones 
+                        <br>- Desarrollo de interfaces gráficas (GUI)">
+                    <img class="techIcon" src="icon/java-svgrepo-com.svg" alt="">
+                        Java
+                    </div>
+                    <div class="skills" id="skill2" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Estructuración web 
+                        <br>- Uso de semántica HTML5 
+                        <br>- Creación de formularios 
+                        <br>- Inclusión de multimedia">
+                    <img class="techIcon" src="icon/html-5-svgrepo-com.svg" alt="">
+                        HTML
+                    </div>
+                    <div class="skills" id="skill3" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Estilización avanzada 
+                        <br>- Flexbox y Grid 
+                        <br>- Animaciones y transiciones 
+                        <br>- Diseño responsive">
+                    <img class="techIcon" src="icon/css-3-svgrepo-com.svg" alt="">
+                        CSS
+                    </div>
+                    <div class="skills" id="skill4" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Interfaces dinámicas 
+                        <br>- Manipulación del DOM 
+                        <br>- Programación asíncrona (Promesas y async/await) 
+                        <br>- Manejo de eventos 
+                        <br>- Interacción con APIs">
+                    <img class="techIcon" src="icon/javascript-svgrepo-com.svg" alt="">
+                        Javascript
+                    </div>
+                    <div class="skills" id="skill5" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Backend 
+                        <br>- Conexión a bases de datos (CRUD)
+                        <br>- Manejo de sesiones y cookies 
+                        <br>- Programación orientada a objetos ">
+                    <img class="techIcon" src="icon/php-svgrepo-com.svg" alt="">
+                        PHP
+                    </div>
+                    <div class="skills" id="skill6" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Consultas SQL 
+                        <br>- Gestión de bases de datos 
+                        <br>- Normalización de datos 
+                        <br>- Creación de tablas y relaciones">
+                    <img class="techIcon" src="icon/sql-svgrepo-com.svg" alt="">
+                        SQL
+                    </div>
+                    <div class="skills" id="skill7" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Control de versiones 
+                        <br>- Colaboración en proyectos 
+                        <br>- Creación y manejo de ramas 
+                        <br>- Uso de repositorios remotos (GitHub, GitLab)">
+                    <img class="techIcon" src="icon/git-svgrepo-com.svg" alt="">
+                        GIT
+                    </div>
+                    <div class="skills" id="skill8" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Desarrollo con Unity 
+                        <br>- Programación orientada a objetos 
+                        <br>- Clean Coding 
+                        <br>- Creación de scripts para videojuegos 
+                        <br>- Uso de componentes y assets 
+                        <br>- Debugging y optimización de juegos">
+                    <img class="techIcon" src="icon/c-sharp-svgrepo-com.svg" alt="">
+                        C#
+                    </div>
+                    <div class="skills" id="skill9" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Desarrollo Android 
+                        <br>- Interacción con APIs 
+                        <br>- Manejo de activities
+                        <br>- Creación de interfaces de usuario 
+                        <br>- Almacenamiento de datos local (SQLite)">
+                    <img class="techIcon" src="icon/android-svgrepo-com.svg" alt="">
+                        Android
+                    </div>
+                    <div class="skills" id="skill10" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                        "- Diseño de interfaces responsivas
+                        <br>- Uso de componentes predefinidos
+                        <br>- Creación de formularios y validaciones
+                        <br>- Implementación de navegación y menús
+                        <br>- Manejo de modales, tooltips y popovers
+                        <br>- Compatibilidad cross-browser
+                        <br>- Optimización para rendimiento web
+                        <br>- Creación de layouts utilizando el grid system">
+                    <img class="techIcon" src="icon/bootstrap-fill-svgrepo-com.svg" alt="">
+                        Bootstrap
+                    </div>
+                    <div class="skills" id="skill11" data-bs-toggle="tooltip" data-bs-html="true" data-bs-title=
+                    "- Configuración de rutas y controladores
+                        <br>- Creación de vistas con Blade
+                        <br>- Manejo de migraciones y bases de datos
+                        <br>- Uso de Eloquent ORM para consultas
+                        <br>- Validación de formularios en el servidor
+                        <br>- Autenticación básica de usuarios
+                        <br>- Integración de layouts y componentes reutilizables
+                        <br>- Consumo y creación de APIs REST con Laravel">
+                        <img class="techIcon" src="icon/laravel-svgrepo-com.svg" alt="">
+                        Laravel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                <p class="titulo">Formación académica</p>
+            </button>
+            </h2>
+            <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <u class="titulo">Formación</u>
+                    <br><br>- Estudios secundarios: completos (2009) - E.T.A.M. (Escuela Técnica Alemana Moreno)
+                    <br>- Títulos: Técnico en equipos e instalaciones electromecánicas (E.T.A.M.) y Bachiller modalidad Producción de Bienes y Servicios (E.T.A.M.)
+                    <br>- Quinto año de Ingeniería industrial (UNlu)
+                    <br>- Primer año de Ingeniería en sistemas  de información (UTN - FRBA)
+                    <br>- Curso de Inglés (Stratford institute)
+                    <br>- Curso de Excel (E.T.A.M.)
+                    <br>- Curso de AutoCAD (E.T.A.M.)
+                    <br>- Curso de automatización Electro-Neumática de equipos e instalaciones (Unilever)
+                    <br>- Curso de capacitación en Seguridad industrial (Gulf / UNLu)
+                    <br><u class="titulo">Competencias</u>
+                    <br>- Mantenimiento y reparación de equipos e instalaciones
+                    <br>- Programación CNC
+                    <br>- Control Estadístico de Procesos
+                    <br>- Planificación de la producción (M.R.P.)
+                    <br>- Diseño y estudio de Métodos y control de Tiempos de Procesos
+                    <br>- Dimensionamiento de redes y equipos eléctricos industriales
+                    <br>- Realización de ensayos de materiales (Dureza, Tracción, Metalografías, E.N.D., etc.)</p>  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                <p class="titulo">Historial académico</p>
+            </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>This is the first item’s accordion body.</strong> It isn by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as theing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                <p class="titulo">Experiencia laboral</p>
+            </button>
+            </h2>
+            <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p class=""><u class="Subtitulo">Experiencia laboral en industria</u>
+                    <br><br>- Operario de producción (Unilever s.a. - 2011)
+                    <br>- Operario de mantenimiento (Rio Chico s.a. - 2013)
+                    <br>- Operario de producción/mantenimiento (Gulf Oil s.a. - 2018 a 2019)
+                    <br>- Dibujante Cadista y Responsable de Compras (Data entry) (Fiemel s.a. - 2019 a 2020)
+                    <br><br><u class="Subtitulo">Experiencia laboral independiente</u>
+                    <br>- Mantenimiento y diseño de instalaciones eléctricas (2009 a 2021)
+                    <br>- Dibujante Cadista de redes y estructuras (2009 a 2020)
+                    <br><br><u class="Subtitulo">Otra experiencia laboral</u>
+                    <br>- Ayudante de cátedra (UNLu) Introducción a la química - Química general e inorgánica - Química Industrial (2017 al presente)</p> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion accordion-flush">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+                <p class="titulo">Medios de contacto</p>
+            </button>
+            </h2>
+            <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body" id="contact">
+                    <a class="iconos" rel="noopener" target="_blank" id="fb" href="https://www.facebook.com/?ref=homescreenpwa"><img src="icon/facebook-svgrepo-com.svg" alt="Facebook"></a>
+                    <a class="iconos" rel="noopener" target="_blank" id="ig" href="https://www.instagram.com/ignaciogabrielopez/"><img src="icon/instagram-svgrepo-com.svg" alt="Instagram"></a>
+                    <a class="iconos" rel="noopener" target="_blank" id="mail"  data-bs-toggle="modal" data-bs-target="#modalMail" data-bs-whatever="@getbootstrap"href=""><img src="icon/mail-svgrepo-com.svg" alt="mail"></a>
+                    <a class="iconos" rel="noopener" target="_blank" id="ln" href="https://www.linkedin.com/in/ignacio-gabriel-lopez-velazquez-462870163/"><img src="icon/linkedin-svgrepo-com.svg" alt="LinkedIn"></a>
+                    <a class="iconos" rel="noopener" target="_blank" id="wp" href="https://api.whatsapp.com/send?phone=541168553317"><img src="icon/whatsapp-svgrepo-com.svg" alt="WhatsApp"></a>
+                </div>
             </div>
         </div>
     </div>
@@ -300,11 +342,16 @@
             customClass: 'fade'    // fuerza la clase fade para transición
             })
         );
-    });
-
-    document.getElementById('irAContacto').addEventListener('click', function () {
-    document.getElementById('ti').scrollIntoView({
-        behavior: 'auto'
+        document.getElementById('irAContacto').addEventListener('click', function () {
+            const collapse = document.getElementById('collapse9');
+            bootstrap.Collapse.getOrCreateInstance(collapse).show();
+            function onShown() {
+                collapse.removeEventListener('shown.bs.collapse', onShown);
+                setTimeout(() => {
+                document.getElementById('wp').scrollIntoView({ behavior: 'smooth', block: 'end' });
+                }, 250);
+            }
+            collapse.addEventListener('shown.bs.collapse', onShown);
         });
     });
     
@@ -322,7 +369,7 @@
     });
 
     document.getElementById('up').addEventListener('click', function () {
-    document.getElementById('itemA').scrollIntoView({
+    document.getElementById('foto').scrollIntoView({
         behavior: 'auto'
         });
     });
