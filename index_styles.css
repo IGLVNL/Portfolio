@@ -113,10 +113,13 @@ body{
 /*ACORDEONES*/
 
 /*PROYECTOS IT, SKILLS, CONTACTO*/
-#collapse3 .accordion-body, #collapse6 .accordion-body, #collapse9 .accordion-body{
+#collapse3 .accordion-body, #tecnologias, #frameworks, #collapse9 .accordion-body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+#collapse6 .accordion-body{
+    flex-direction: column;
 }
 
 #collapse3 .accordion-body a,.skills{
@@ -180,8 +183,6 @@ body{
         transform: rotate(5deg) scale(1);
     }
 }
-
-/*Estilos*/
 
 .titulo{
     text-align: center;
