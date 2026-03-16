@@ -16,7 +16,8 @@ const pool = new Pool({
     if (dia === 1 && mesActual > ultimoReset) {
         visitas = 10;
         ultimoReset = mesActual + "-01";
-    }
+        }
+        console.log(`IP visitante: ${ip}, IP del servidor: ${miIP}`);
     if (ip !== miIP) {
         visitas++;
         await pool.query(
