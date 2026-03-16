@@ -330,7 +330,7 @@
                     <a class="iconos" rel="noopener" target="_blank" id="ig" href="https://www.instagram.com/ignaciogabrielopez/"><img src="icon/instagram-svgrepo-com.svg" alt="Instagram"></a>
                     <a class="iconos" rel="noopener" target="_blank" id="mail"  data-bs-toggle="modal" data-bs-target="#modalMail" data-bs-whatever="@getbootstrap"href=""><img src="icon/mail-svgrepo-com.svg" alt="mail"></a>
                     <a class="iconos" rel="noopener" target="_blank" id="ln" href="https://www.linkedin.com/in/ignacio-gabriel-lopez-velazquez-462870163/"><img src="icon/linkedin-svgrepo-com.svg" alt="LinkedIn"></a>
-                    <a class="iconos" rel="noopener" target="_blank" id="wp" href="https://api.whatsapp.com/send?phone=541168553317"><img src="icon/whatsapp-svgrepo-com.svg" alt="WhatsApp"></a>
+                    <a class="iconos" rel="noopener" target="_blank" id="wp" href="https://api.whatsapp.com/send?phone=541162107308"><img src="icon/whatsapp-svgrepo-com.svg" alt="WhatsApp"></a>
                 </div>
             </div>
         </div>
@@ -451,7 +451,7 @@
         document.body.removeChild(link);
     });
 </script>
-<script>
+<script>//Contador de visitas con función serverless en Netlify
 async function cargarVisitas(){
     const response = await fetch("/.netlify/functions/contador");
     const data = await response.json();
@@ -459,54 +459,3 @@ async function cargarVisitas(){
     }
     window.addEventListener("load", cargarVisitas);
 </script>
-<!-- <script>//Coneccion a base de datos SQL.js para contador de visitas
-    let SQL;
-    let db;
-    async function initDatabase() {
-        const config = {
-            locateFile: file => `./${file}`
-        };
-        SQL = await initSqlJs(config);
-        const storedDB = localStorage.getItem('portfolioDB');
-        if (storedDB) {
-            const binaryString = atob(storedDB);
-            const bytes = new Uint8Array(binaryString.length);
-            for (let i = 0; i < binaryString.length; i++) {
-                bytes[i] = binaryString.charCodeAt(i);
-            }
-            db = new SQL.Database(bytes);
-        } else {
-            const response = await fetch('db.db');
-            const arrayBuffer = await response.arrayBuffer();
-            db = new SQL.Database(new Uint8Array(arrayBuffer));
-        }
-        db.run(`CREATE TABLE IF NOT EXISTS estadisticas (
-            id INTEGER PRIMARY KEY,
-            visitas INTEGER DEFAULT 10,
-            ultima_reset TEXT DEFAULT '1970-01'
-        )`);
-        db.run(`INSERT OR IGNORE INTO estadisticas (id, visitas, ultima_reset) VALUES (1, 10, '1970-01')`);
-        const result = db.exec("SELECT visitas, ultima_reset FROM estadisticas WHERE id = 1");
-        let visitas = result.length > 0 ? result[0].values[0][0] : 10;
-        let ultimoMesReset = result.length > 0 ? result[0].values[0][1] : '1970-01';
-        const hoy = new Date();
-        const mesActual = hoy.getFullYear() + '-' + String(hoy.getMonth() + 1).padStart(2, '0');
-        const diaDelMes = hoy.getDate();
-        if (diaDelMes === 1 && mesActual > ultimoMesReset) {
-            visitas = 10;
-            ultimoMesReset = mesActual;
-        }
-        visitas++;
-        db.run("UPDATE estadisticas SET visitas = ?, ultima_reset = ? WHERE id = 1", [visitas, ultimoMesReset]);
-        const data = db.export();
-        const buffer = new Uint8Array(data);
-        let binary = '';
-        for (let i = 0; i < buffer.length; i++) {
-            binary += String.fromCharCode(buffer[i]);
-        }
-        localStorage.setItem('portfolioDB', btoa(binary));
-        
-        document.getElementById('contador').textContent = visitas;
-    }
-    window.addEventListener('load', initDatabase);
-</script> -->
