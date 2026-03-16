@@ -24,6 +24,24 @@
     font-style: oblique;
 }
 
+#contVisitas{
+    display: flex;
+    position: fixed;
+    justify-content: start;
+    align-items: normal;
+    left: 10px;
+    top: 10px;
+    z-index: 500;
+    font-family: "Nueva fuente personalizada";
+    font-style: normal;
+    font-size: 15px;
+    opacity: 0.5;
+}
+#contVisitas p{
+    margin: 0;
+    color: white;
+}
+
 .tooltip.fade {
   transition: opacity 0.2s ease-in-out; /* ajustá la duración a tu gusto */
 }
