@@ -342,50 +342,63 @@
                     <h1 class="modal-title fs-5" id="modalMailLabel">Envíame un e-mail:</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            <div class="modal-body">
-                <form id="contact-form">
-                    <div class="mb-1">
-                        <label for="recipient-name" class="col-form-label">Tu nombre:</label>
-                        <input type="text" class="form-control" id="recipient-name" required name="name">
-                    </div>
-                    <div class="mb-1">
-                        <label for="recipient-name" class="col-form-label">Tu e-mail:</label>
-                        <input type="text" class="form-control" id="email-name" required name="email">
-                    </div>
-                    <div class="mb-1">
-                        <label for="message-text" class="col-form-label">Asunto:</label>
-                        <input class="form-control" id="asunto-text" required name="title"></input>
-                    </div>
-                    <div class="mb-1">
-                        <label for="message-text" class="col-form-label">Mensaje:</label>
-                        <textarea class="form-control" id="message-text" required name="message"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-3">Enviar</button>
-                </form>
+                <div class="modal-body">
+                    <form id="contact-form">
+                        <div class="mb-1">
+                            <label for="recipient-name" class="col-form-label">Tu nombre:</label>
+                            <input type="text" class="form-control" id="recipient-name" required name="name">
+                        </div>
+                        <div class="mb-1">
+                            <label for="recipient-name" class="col-form-label">Tu e-mail:</label>
+                            <input type="text" class="form-control" id="email-name" required name="email">
+                        </div>
+                        <div class="mb-1">
+                            <label for="message-text" class="col-form-label">Asunto:</label>
+                            <input class="form-control" id="asunto-text" required name="title"></input>
+                        </div>
+                        <div class="mb-1">
+                            <label for="message-text" class="col-form-label">Mensaje:</label>
+                            <textarea class="form-control" id="message-text" required name="message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-    (function(){
-        emailjs.init("knEUTDSMybhJBUBm_");
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        emailjs.sendForm('service_sjzyjkw', 'template_po2hbv9', this)
-        .then(() => {
-            alert('¡Correo enviado con éxito!');
-            this.reset();
-            const modalElement = document.getElementById('modalMail');
-            const modalInstance = bootstrap.Modal.getInstance(modalElement);
-            modalInstance.hide();
-        }, err => { alert('Error al enviar: ' + err.text);});
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>//Configuración para el envio de mail con EmailJS
+        const form = document.getElementById("contact-form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            emailjs.sendForm('service_id', 'template_id', form, {
+            publicKey: 'TU_PUBLIC_KEY',
+            }).then(() => {
+            console.log("Mensaje enviado!");
+            }).catch((error) => {
+            console.error("Error:", error);
+            });
         });
-    })();
-</script>
+    </script>
+    <script>//Funcion para envio de mail con EmailJS
+        (function(){
+            emailjs.init("knEUTDSMybhJBUBm_");
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            emailjs.sendForm('service_sjzyjkw', 'template_po2hbv9', this)
+            .then(() => {
+                alert('¡Correo enviado con éxito!');
+                this.reset();
+                const modalElement = document.getElementById('modalMail');
+                const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                modalInstance.hide();
+            }, err => { alert('Error al enviar: ' + err.text);});
+            });
+        })();
+    </script>
 </body>
 </html>
-<script>
+<script>//Calculo de edad y configuración de tooltips, botón de ir a contacto y botón de ir arriba
     let edad = new Date().getFullYear() - 1990;
     document.getElementById("edad2").textContent = edad;
     document.addEventListener('DOMContentLoaded', function () {
@@ -428,7 +441,7 @@
         });
     });
 </script>
-<script>
+<script>//Descarcar CV en PDF
     document.getElementById('pdf').addEventListener('click', function () {
         const link = document.createElement('a');
         link.href = 'CV_Ignacio_Lopez_Velazquez.pdf';
@@ -438,7 +451,7 @@
         document.body.removeChild(link);
     });
 </script>
-<script>
+<script>//Coneccion a base de datos SQL.js para contador de visitas
     let SQL;
     let db;
     async function initDatabase() {
