@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@emailjs/browser": "^4.4.1"
+    "@emailjs/browser": "^4.4.1",
+    "@netlify/neon": "^0.1.2",
+    "pg": "^8.20.0"
   }
 }

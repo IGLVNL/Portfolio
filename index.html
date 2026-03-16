@@ -451,7 +451,15 @@
         document.body.removeChild(link);
     });
 </script>
-<script>//Coneccion a base de datos SQL.js para contador de visitas
+<script>
+async function cargarVisitas(){
+    const response = await fetch("/.netlify/functions/contador");
+    const data = await response.json();
+    document.getElementById("contador").textContent = data.visitas;
+    }
+    window.addEventListener("load", cargarVisitas);
+</script>
+<!-- <script>//Coneccion a base de datos SQL.js para contador de visitas
     let SQL;
     let db;
     async function initDatabase() {
@@ -501,4 +509,4 @@
         document.getElementById('contador').textContent = visitas;
     }
     window.addEventListener('load', initDatabase);
-</script>
+</script> -->
