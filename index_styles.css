@@ -23,6 +23,12 @@
     font-weight: 700;
     font-style: oblique;
 }
+#irAContacto, #pdf{
+    color: lightskyblue;
+}
+#irAContacto:hover, #pdf:hover{
+    color: white;
+}
 
 #contVisitas{
     display: flex;
