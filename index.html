@@ -252,10 +252,12 @@
             <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <p class="titulo">Materias aprobadas por año</p><br>
-                    <p class="Subtitulo">Ingenieria Industrial (plan 25.08)</p>
+                    <p class="Subtitulo">Ingeniería Industrial (plan 25.08)</p>
+                    <br>
+                    <button type="button" class="btn btn-outline-primary rounded-pill btn-sm" id="pdfUNLu">Descargar certificado de materias aprobadas</button>
                     <br>
                     <p class="Subtitulo">Primer año<p>
-                    Elementos de Matemática - Introducción a la Química - Introducción a la Ingeniería - Competencias basicas en Ingles I y II - Competencias basicas en Informática - Introducción a la Ingeniería - Química General - Álgebra - Análisis Matemático I - Organización Industrial I
+                    Elementos de Matemática - Introducción a la Química - Introducción a la Ingeniería - Competencias básicas en Ingles I y II - Competencias básicas en Informática - Introducción a la Ingeniería - Química General - Álgebra - Análisis Matemático I - Organización Industrial I
                     <p class="Subtitulo">Segundo año<p>
                     Sistemas de Información - Química Industrial - Física I - Análisis Matemático II - Dibujo Técnico - Física II - Organización Industrial II - Análisis Matemático II - Estabilidad - Programación y Métodos Numéricos
                     <p class="Subtitulo">Tercer año<p>
@@ -277,7 +279,9 @@
                     Seguridad Ambiental e Industrial - 
                     Gestión de la Calidad en Procesos Productivos - 
                     <br><br>
-                    <p class="Subtitulo">Ingenieria en Sistemas de información (plan K23)</p>
+                    <p class="Subtitulo">Ingeniería en Sistemas de información (plan K23)</p>
+                    <br>
+                    <button type="button" class="btn btn-outline-primary rounded-pill btn-sm" id="pdfUTN">Descargar certificado de materias aprobadas</button>
                     <br>
                     <p class="Subtitulo">Primer año<p>
                     Álgebra y Geometría Analítica - Física I  - Inglés Técnico Nivel I - Análisis Matemático I
@@ -436,11 +440,27 @@
         });
     });
 </script>
-<script>//Descarcar CV en PDF
+<script>//Descarcar CV en PDF y Certificados de materias aprobadas
     document.getElementById('pdf').addEventListener('click', function () {
         const link = document.createElement('a');
         link.href = 'CV_Ignacio_Lopez_Velazquez.pdf';
         link.download = 'CV_Ignacio_Lopez_Velazquez.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+    document.getElementById('pdfUNLu').addEventListener('click', function () {
+        const link = document.createElement('a');
+        link.href = 'certificado de materias aprobadas UNLU.pdf';
+        link.download = 'certificado de materias aprobadas UNLU.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
+    document.getElementById('pdfUTN').addEventListener('click', function () {
+        const link = document.createElement('a');
+        link.href = 'constancia de materias aprobadas UTN.pdf';
+        link.download = 'constancia de materias aprobadas UTN.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

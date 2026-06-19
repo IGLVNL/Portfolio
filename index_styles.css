@@ -129,6 +129,9 @@ body{
     font-family: "Nueva fuente personalizada";
     font-style: normal;
     font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .accordion .accordion-collapse .accordion-body:hover {
     background: rgba(42, 42, 42, 0.96) !important;
@@ -211,7 +214,7 @@ body{
 .titulo{
     text-align: center;
     height: 100%;
-    font-size: 23px!important;
+    font-size: 24px!important;
     margin: 0;
     color: white;
     font-family: "Nueva fuente personalizada";
@@ -229,4 +232,8 @@ body{
 
 .titulo:hover, .Subtitulo:hover{
     color: #fff68f !important;
+}
+
+.pdfUNLu, .pdfUTN{
+    font-size: 15px;
 }
