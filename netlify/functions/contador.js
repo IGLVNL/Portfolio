@@ -18,7 +18,7 @@ const pool = new Pool({
         ultimoReset = mesActual + "-01";
         }
         console.log(`IP visitante: ${ip}, IP del servidor: ${miIP}`);
-    if (ip !== miIP) {
+    if (ip !== miIP && visitas < 26) {
         visitas++;
         await pool.query(
         "UPDATE estadisticas SET visitas=$1, ultima_reset=$2 WHERE id=1",

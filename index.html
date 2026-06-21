@@ -253,8 +253,10 @@
                 <div class="accordion-body">
                     <p class="titulo">Materias aprobadas por año</p><br>
                     <p class="Subtitulo">Ingeniería Industrial (plan 25.08)<br>
-                    <button type="button" class="btn btn-outline-primary rounded-pill btn-sm" id="pdfUNLu">Descargar certificado de materias aprobadas</button></p>
-                    <br>
+                    <button type="button" class="btn btn-outline-primary rounded-pill btn-sm" id="pdfUNLu" aria-label="Descargar certificado de materias aprobadas">
+                        <img src="icon/download-minimalistic-svgrepo-com.svg" alt="" width="20" height="20" color="white">
+                        <p hidden>Descargar certificado de materias aprobadas</p>
+                    </button>
                     <p class="Subtitulo">Primer año<p>
                     Elementos de Matemática - Introducción a la Química - Introducción a la Ingeniería - Competencias básicas en Ingles I y II - Competencias básicas en Informática - Introducción a la Ingeniería - Química General - Álgebra - Análisis Matemático I - Organización Industrial I
                     <p class="Subtitulo">Segundo año<p>
@@ -279,7 +281,8 @@
                     Gestión de la Calidad en Procesos Productivos - 
                     <br><br>
                     <p class="Subtitulo">Ingeniería en Sistemas de información (plan K23)<br>
-                    <button type="button" class="btn btn-outline-primary rounded-pill btn-sm" id="pdfUTN">Descargar certificado de materias aprobadas</button></p>
+                        <button type="button" class="btn btn-outline-primary rounded-pill btn-sm" id="pdfUTN" aria-label="Descargar certificado de materias aprobadas"><img src="icon/download-minimalistic-svgrepo-com.svg" alt="" width="20" height="20" color="white"><p hidden>Descargar certificado de materias aprobadas</p></button>
+                    </p>
                     <br>
                     <p class="Subtitulo">Primer año<p>
                     Álgebra y Geometría Analítica - Física I  - Inglés Técnico Nivel I - Análisis Matemático I
@@ -447,7 +450,9 @@
         link.click();
         document.body.removeChild(link);
     });
-    document.getElementById('pdfUNLu').addEventListener('click', function () {
+    const pdfUNLuButton = document.getElementById('pdfUNLu');
+    const pdfUTNButton = document.getElementById('pdfUTN');
+    pdfUNLuButton.addEventListener('click', function () {
         const link = document.createElement('a');
         link.href = 'certificado de materias aprobadas UNLU.pdf';
         link.download = 'certificado de materias aprobadas UNLU.pdf';
@@ -455,13 +460,29 @@
         link.click();
         document.body.removeChild(link);
     });
-    document.getElementById('pdfUTN').addEventListener('click', function () {
+    pdfUTNButton.addEventListener('click', function () {
         const link = document.createElement('a');
         link.href = 'constancia de materias aprobadas UTN.pdf';
         link.download = 'constancia de materias aprobadas UTN.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+    });
+    pdfUTNButton.addEventListener('mouseover', function () {
+        pdfUTNButton.firstElementChild.hidden = true;
+        pdfUTNButton.children[1].hidden = false;
+    });
+    pdfUTNButton.addEventListener('mouseout', function () {
+        pdfUTNButton.firstElementChild.hidden = false;
+        pdfUTNButton.children[1].hidden = true;
+    });
+    pdfUNLuButton.addEventListener('mouseover', function () {
+        pdfUNLuButton.firstElementChild.hidden = true;
+        pdfUNLuButton.children[1].hidden = false;
+    });
+    pdfUNLuButton.addEventListener('mouseout', function () {
+        pdfUNLuButton.firstElementChild.hidden = false;
+        pdfUNLuButton.children[1].hidden = true;
     });
 </script>
 <script>//Contador de visitas con función serverless en Netlify

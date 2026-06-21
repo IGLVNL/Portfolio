@@ -230,6 +230,10 @@ body{
     color: #fff68f !important;
 }
 
-.pdfUNLu, .pdfUTN{
-    font-size: 15px;
+#pdfUNLu, #pdfUTN{
+    min-width: 50px;
+}
+
+#pdfUNLu p, #pdfUTN p{
+    margin-bottom: 0!important;
 }
